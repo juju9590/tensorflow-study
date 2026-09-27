@@ -3,8 +3,8 @@
 # 목표 : 
 
 import numpy as np
-# from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+# from keras.preprocessing.image import ImageDataGenerator
 
 print(np.__version__)
 
@@ -31,8 +31,8 @@ test_datagen = ImageDataGenerator(
 # 테스트할 이미지는 변환하면 안 됨. 절대 변환하지 않음 => 데이터 조작이 될 수 있기때문에 
 
 # 파일의 경로
-path_train = './_data/image/brain/train/'  #C:\study\_data\image\brain\train
-path_test = './_data/image/brain/test/'
+# path_train = './_data/image/brain/train/'  #C:\study\_data\image\brain\train
+# path_test = './_data/image/brain/test/'
 
 xy_train = train_datagen.flow_from_directory(            # 디렉토리(폴더)로 부터 트레인 데이터를 가져오겠다.
     path_train,                 # 폴더의 경로
