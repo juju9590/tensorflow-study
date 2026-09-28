@@ -73,13 +73,10 @@ np.save(data_path+'cat_dog_y_test.npy', arr=xy_test[0][1])
 
 model = Sequential()
 model.add(Conv2D(64, (3,3), input_shape=(150,150,3), activation='relu'))
-model.add(Conv2D(64, (3,3), activation='relu'))
 model.add(MaxPool2D())
-model.add(Conv2D(32, (3,3), activation='relu'))
 model.add(Conv2D(32, (3,3), activation='relu'))
 model.add(MaxPool2D())
 model.add(Conv2D(64, (3,3), activation='relu'))
-model.add(Conv2D(64, (2,2), activation='relu'))
 
 # model.add(Flatten())
 model.add(GlobalAveragePooling2D())
@@ -92,13 +89,15 @@ model.add(Dense(2, activation='softmax'))
 model.summary()
 
 # 3. 컴파일, 훈련
-model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['acc'])
-
+model.compile(loss='categorical_crossentropy', 
+              optimizer='adam', 
+              metrics=['acc'],
+              )
 
 start_time = time.time()
 model.fit(x_train, y_train,
-          epochs= 1,
-          batch_size=128,
+          epochs= 50,
+          batch_size=64,
           verbose=1,
           validation_split=0.2, 
           )
@@ -106,7 +105,7 @@ end_time = time.time()
 
 # 전체 모델 저장
 model_path ='./_save/image/cat_dog/'
-filename = 'cat_dog_model.keras'
+filename = 'cat_dog_model_111.keras'
 
 model.save(model_path + filename)
 
@@ -115,8 +114,8 @@ model.save(model_path + filename)
 
 # 4. 평가, 예측
 results = model.evaluate(x_test, y_test,)
-print('loss : ', round(results[0],4))
-print('acc : ', round(results[1],4))
+print('loss : ', round(results[0],3))
+print('acc : ', round(results[1],3))
 
 y_pred = np.argmax(model.predict(x_test), axis=1)
 y_test = np.argmax(y_test, axis=1)
@@ -134,17 +133,20 @@ print('훈련 걸린시간 : ', round(end_time-start_time,2), "초")
 
 # =================================
 
-# sigmoid --> softmax 수정
-# Found 8005 images belonging to 2 classes.
-# Found 2023 images belonging to 2 classes.
-# (8005, 150, 150, 3) (8005, 2)
-# (2023, 150, 150, 3) (2023, 2)
+
 # 데이터 걸린시간 :  34.9 초
 ### ecope 1번
 # loss :  0.6931
 # acc :  0.4998
 # acc_score :  0.49975284231339595
 # 훈련 걸린시간 :  183.28 초
+
+# softmax (epochs=50, batch_size=32, 모델 layer 단순화)
+# 'cat_dog_model.keras'
+# loss :  0.426
+# acc :  0.813
+# acc_score :  0.8126544735541276
+# 훈련 걸린시간 :  221.78 초
 
 
 

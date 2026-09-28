@@ -47,7 +47,7 @@ print(np.min(x_test), np.max(x_test))
 #2. 모델구성
 model = Sequential()
 model.add(Dense(2, activation='relu', input_dim=8))
-model.add(Dropout(0.2))
+model.add(Dropout(0.2)) # 과적합 과정
 
 model.add(Dense(6, activation='relu'))
 model.add(Dropout(0.3))
@@ -59,8 +59,9 @@ model.add(Dense(6, activation='relu'))
 
 model.add(Dense(1))
 
-# Dropout 은 노드가 있지만
-
+# Dropout 은 노드가 있지만 그 많은 노드를 다 사용할 필요가 있냐는 의문에 
+# 랜덤으로 노드를 빼서 계산하는 방법 (과적합 방지)
+# 평가예측에는 적용되지 않는다.. 풀 노드로 간다. 훈련에서만 빠진다
 
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 

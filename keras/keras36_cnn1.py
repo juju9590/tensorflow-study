@@ -1,3 +1,6 @@
+# 이미지도 수치더라... 0부터 255까지(이미지 데이터에 한정)
+# 이미지는 255로 나누거나 127.5로 나눠 스케일링한다
+
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Conv2D
 # Conv2D : 자른 필터는 가로*세로 만 있으니 2D , 이미지를 자르는 것을 Conv2D 라고 생각하면 쉽다

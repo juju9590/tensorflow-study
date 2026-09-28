@@ -61,9 +61,14 @@ rlr = ReduceLROnPlateau(
     mode='auto',
     patience=20,
     verbose=1,
-    factor=0.5, # learning_rate(러닝레이트) 비율 조절
+    factor=0.5, # learning_rate(러닝레이트) 비율 조절 : 0-1 사이
 
 )
+
+# learning_rate로 적용되다가 어느 지점에서 최저점을 못찾고 핑퐁을 치면 
+# reduceLR의 patience 만큼 참다가, factor만큼 조절된다 
+# factor=0.5라면 learning_rate의 폭이 반으로 줄어든다... 
+# 최저점을 찾을 수도 있다
 
 import time
 start_time = time.time()

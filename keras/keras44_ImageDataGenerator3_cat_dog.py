@@ -4,8 +4,8 @@
 import numpy as np
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Conv2D, Flatten, Dropout, MaxPool2D, GlobalAveragePooling2D
+from tensorflow.python.keras.models import Sequential
+from tensorflow.python.keras.layers import Dense, Conv2D, Flatten, Dropout, MaxPool2D, GlobalAveragePooling2D
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 
 import time
@@ -14,11 +14,18 @@ from sklearn.metrics import accuracy_score
 
 # 1. 데이터
 
-start_data =time.time()
-
 train_datagen = ImageDataGenerator(
-    rescale=1./255,  
-)          
+    rescale=1./255,            
+
+    # horizontal_flip=True,       # 수평 뒤집기,
+    # vertical_flip=True,         # 수직 뒤집기,
+    # width_shift_range=0.1,      # 평형이동
+    # height_shift_range=0.1,
+    # rotation_range=5,           # 각도조절(정해진 각도만큼 이미지 회전)
+    # zoom_range=1.2,             # 확대
+    # shear_range=0.7,            # 좌표하나를 고정하고 다른 몇개의 좌표를 이동(한마디로 찌부) 
+    # fill_mode='nearest',        # 변화나 이동으로 인해 없어진 값은 근처의 값으로 채운다
+)  
 
 test_datagen = ImageDataGenerator(
     rescale=1./255,
@@ -48,6 +55,8 @@ xy_test = test_datagen.flow_from_directory(
 )
 # Found 2023 images belonging to 2 classes.
 
+
+
 x_train = xy_train[0][0]
 y_train = xy_train[0][1]
 x_test = xy_test[0][0]
@@ -56,22 +65,7 @@ y_test = xy_test[0][1]
 print(x_train.shape, y_train.shape) #(8005, 150, 150, 3) (8005,)
 print(x_test.shape, y_test.shape)   #(2023, 150, 150, 3) (2023,)
 
-# 데이터 저장하기 
-
-data_path="./_save/image/cat_dog/"
-
-np.save(data_path + 'cat_dog_sigmoid_x_train.npy', arr=xy_train[0][0])
-np.save(data_path + 'cat_dog_sigmoid_y_train.npy', arr=xy_train[0][1])
-np.save(data_path + 'cat_dog_sigmoid_x_test.npy', arr=xy_test[0][0])
-np.save(data_path + 'cat_dog_sigmoid_y_test.npy', arr=xy_test[0][1])
-
-# x_train = np.load(data_path + 'cat_dog_sigmoid_x_train.npy')
-# y_train = np.load(data_path + 'cat_dog_sigmoid_y_train.npy')
-# x_test = np.load(data_path + 'cat_dog_sigmoid_x_test.npy')
-# y_test = np.load(data_path + 'cat_dog_sigmoid_y_test.npy')
-
-end_data =time.time()
-
+# exit()
 
 # 실습 : acc 1.0
 # 2. 모델구성
@@ -80,12 +74,12 @@ model = Sequential()
 model.add(Conv2D(64, (3,3), padding='same', input_shape=(150,150,3), activation='relu'))
 model.add(Conv2D(64, (3,3), strides=2, activation='relu'))
 model.add(Dropout(0.2))
-model.add(Conv2D(32, (3,3), activation='relu'))
-model.add(Conv2D(32, (3,3), activation='relu'))
+model.add(Conv2D(32, (3,3), padding='same', activation='relu'))
+model.add(Conv2D(32, (3,3), strides=2, activation='relu'))
 model.add(MaxPool2D())
 model.add(Conv2D(64, (3,3), activation='relu'))
 model.add(Conv2D(64, (2,2), activation='relu'))
-model.add(Dropout(0.2))
+# model.add(Dropout(0.2))
 
 # model.add(Flatten())
 model.add(GlobalAveragePooling2D())
@@ -97,25 +91,55 @@ model.add(Dense(1, activation='sigmoid'))
 
 model.summary()
 
+# exit()
+
 # 3. 컴파일, 훈련
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['acc'])
 
+es = EarlyStopping(
+    monitor='val_loss',
+    mode='auto',
+    patience=100,
+    restore_best_weights=True,
+    verbose=1,
+)
+
+date = datetime.datetime.now()
+date = date.strftime('%d%m-%H%M')
+
+path ='./_save/keras44/'
+
+filename = '{epoch:04d}-{val_loss:.4f}.keras'
+filepath = "".join([path, "k44_8_", date, "-", filename])
+
+mcp = ModelCheckpoint(
+    monitor='val_loss',
+    mode='auto',
+    save_best_only=True,
+    filepath=filepath,
+    verbose=1,
+)
+
 start_time = time.time()
 model.fit(x_train, y_train,
-          epochs= 70,
-          batch_size=32,
+          epochs= 1,
+          batch_size=100,
           verbose=1,
           validation_split=0.2, 
+        #   callbacks=[es,mcp],         
           )
 end_time = time.time()
 
 
 ##### 모델 저장
-model_path ='./_save/image/cat_dog/'
-filename = 'cat_dog_sigmoid_model_new.keras' # 확장자 : .keras
+path ='./_save/keras44/'
+filename = 'keras44_8_save_model_{epoch:04d}-{val_loss:.4f}.keras'
 
-model.save(model_path + filename)
-# model = load_model(model_path + filename)
+# model.save(path + 'keras44_8_save_model.keras') #가중치 저장 # 확장자 : .keras
+model.save(path + filename) #가중치 저장 # 확장자 : .keras
+
+
+# model = load_model(path + 'keras29_1_save_model.keras')
 
 # 4. 평가, 예측
 results = model.evaluate(x_test, y_test,)
@@ -127,9 +151,7 @@ y_pred = np.round(y_pred) # 반올림 처리
 
 acc_score = accuracy_score(y_test, y_pred)  
 print("acc_score : ", acc_score ) 
-
-print('데이터 걸린시간 : ', round(end_time-start_time,3), "초")
-print('훈련 걸린시간 : ', round(end_data-start_data,3), "초")
+print('걸린시간 : ', round(end_time-start_time,3), "초")
 
 
 # 결과 6
@@ -137,25 +159,6 @@ print('훈련 걸린시간 : ', round(end_data-start_data,3), "초")
 # acc :  0.784
 # acc_score :  0.7839841819080573
 # 걸린시간 :  628.565 초
-
-### sigmoid (epochs= 1)
-# loss :  0.693
-# acc :  0.503
-# acc_score :  0.5027187345526446
-# 데이터 걸린시간 :  80.541 초
-# 훈련 걸린시간 :  49.453 초
-
-### sigmoid (epochs= 50, batch_size=64)
-# 모델 : 'cat_dog_sigmoid_model.keras'
-# loss :  0.695
-# acc :  0.794
-# acc_score :  0.7943648047454276
-
-### sigmoid (epochs= 70, batch_size=32)
-# 모델 : 'cat_dog_sigmoid_model_new.keras'
-
-
-
 
 
 

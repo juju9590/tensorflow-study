@@ -62,6 +62,9 @@ model.add(Dropout(0.3))
 model.add(Conv2D(32, (2,2), activation='relu' ))  
 
 # model.add(Flatten()) # 한마디로 reshape
+# 특화된 이미지를 옆으로 쫙 피는 작업, 중심부에 강력한 특징 있음 
+# 10만개 20만개에서 우리가 찾는값은 10개, 100개 정도
+# Flatten에서 파라미터 확 튀다 
 model.add(GlobalAveragePooling2D())
 
 model.add(Dense(units=128, activation='relu'))
