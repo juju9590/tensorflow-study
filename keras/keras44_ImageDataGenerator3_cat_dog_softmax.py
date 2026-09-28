@@ -14,6 +14,7 @@ from sklearn.metrics import accuracy_score
 
 # 1. 데이터
 start_data = time.time()
+
 train_datagen = ImageDataGenerator(
     rescale=1./255,            
 )  
@@ -43,6 +44,8 @@ xy_test = test_datagen.flow_from_directory(
     color_mode='rgb',     
     shuffle=False, # test에서 필요가 없다 
 )
+print(xy_test.class_indices) #{'cats': 0, 'dogs': 1}
+exit()
 
 x_train = xy_train[0][0]
 y_train = xy_train[0][1]
@@ -51,9 +54,7 @@ y_test = xy_test[0][1]
 
 print(x_train.shape, y_train.shape) #(8005, 150, 150, 3) (8005, 2)
 print(x_test.shape, y_test.shape)   #(2023, 150, 150, 3) (2023, 2)
-end_data = time.time()
 
-print("데이터 걸린시간 : ", round(end_data-start_data,2),"초")
 
 # 데이터 저장하기
 data_path ="./_save/image/cat_dog/"
@@ -63,10 +64,14 @@ np.save(data_path+'cat_dog_y_train.npy', arr=xy_train[0][1])
 np.save(data_path+'cat_dog_x_test.npy', arr=xy_test[0][0])
 np.save(data_path+'cat_dog_y_test.npy', arr=xy_test[0][1])
 
+# 데이터 불러오기
 # x_train = np.load(data_path+'cat_dog_x_train.npy')
 # y_train = np.load(data_path+'cat_dog_y_train.npy')
 # x_test = np.load(data_path+'cat_dog_x_test.npy')
 # y_test = np.load(data_path+'cat_dog_y_test.npy')
+
+end_data = time.time()
+print("데이터 걸린시간 : ", round(end_data-start_data,2),"초")
 
 
 # 2. 모델구성
@@ -74,7 +79,7 @@ np.save(data_path+'cat_dog_y_test.npy', arr=xy_test[0][1])
 model = Sequential()
 model.add(Conv2D(64, (3,3), input_shape=(150,150,3), activation='relu'))
 model.add(MaxPool2D())
-model.add(Conv2D(32, (3,3), activation='relu'))
+model.add(Conv2D(64, (3,3), activation='relu'))
 model.add(MaxPool2D())
 model.add(Conv2D(64, (3,3), activation='relu'))
 
@@ -97,7 +102,7 @@ model.compile(loss='categorical_crossentropy',
 start_time = time.time()
 model.fit(x_train, y_train,
           epochs= 50,
-          batch_size=64,
+          batch_size=32,
           verbose=1,
           validation_split=0.2, 
           )
@@ -105,7 +110,7 @@ end_time = time.time()
 
 # 전체 모델 저장
 model_path ='./_save/image/cat_dog/'
-filename = 'cat_dog_model_111.keras'
+filename = 'cat_dog_model_0928_2th.keras'
 
 model.save(model_path + filename)
 
@@ -125,29 +130,21 @@ print("acc_score : ", acc_score )
 print('훈련 걸린시간 : ', round(end_time-start_time,2), "초")
 
 
-# 결과 6
-# loss :  3.146
-# acc :  0.784
-# acc_score :  0.7839841819080573
-# 걸린시간 :  628.565 초
 
-# =================================
-
-
-# 데이터 걸린시간 :  34.9 초
-### ecope 1번
-# loss :  0.6931
-# acc :  0.4998
-# acc_score :  0.49975284231339595
-# 훈련 걸린시간 :  183.28 초
+# softmax (epochs=50, batch_size=64, 모델 layer 단순화)
+# 'cat_dog_model_0928.keras'
+# loss :  0.457
+# acc :  0.796
+# acc_score :  0.7958477508650519
+# 훈련 걸린시간 :  227.32 초
 
 # softmax (epochs=50, batch_size=32, 모델 layer 단순화)
-# 'cat_dog_model.keras'
-# loss :  0.426
-# acc :  0.813
-# acc_score :  0.8126544735541276
-# 훈련 걸린시간 :  221.78 초
-
+# 'cat_dog_model_0928_2th.keras'
+# loss :  0.437
+# acc :  0.84
+# 64/64 [==============================] - 1s 10ms/step
+# acc_score :  0.8403361344537815
+# 훈련 걸린시간 :  264.66 초
 
 
 

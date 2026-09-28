@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 photo_path = './_data/my_photo/' # 절대경로
-my_img = load_img(photo_path + 'yj_3.jpeg', target_size=(150,150),) # load_img는 한장 가져올때 편함                   
+my_img = load_img(photo_path + 'tori_111.jpeg', target_size=(150,150),) # load_img는 한장 가져올때 편함                   
                
 # print(my_img)
 # print(type(my_img)) #<class 'PIL.Image.Image'>
@@ -25,6 +25,6 @@ print(arr)
 print(arr.shape) #(1, 150, 150, 3)
 
 img_path = './_save/my_photo/'
-filename = 'yj_3.npy'
+filename = 'tori_111.npy'
 
 np.save(img_path + filename , arr=arr)  # 저장 파일명 
