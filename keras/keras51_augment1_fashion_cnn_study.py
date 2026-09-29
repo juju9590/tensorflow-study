@@ -148,20 +148,20 @@ filename = '{epoch:04d}-{val_loss:.4f}.keras'
 filepath = "".join([path, "k36_", date, "-", filename])
 
 mcp = ModelCheckpoint(
-    monitor='val_loss',
-    save_best_only=True,
-    verbose=1,
-    filepath=filepath,
-    mode='min',
-)
+        monitor='val_loss',
+        save_best_only=True,
+        verbose=1,
+        filepath=filepath,
+        mode='min',
+        )
 start_time=time.time()
 model.fit(x_train, y_train,
-          epochs=1,
-          batch_size=32,
-          validation_split=0.2,
-          verbose=1,
-          callbacks=[es, mcp],
-          )
+        epochs=1,
+        batch_size=32,
+        validation_split=0.2,
+        verbose=1,
+        callbacks=[es, mcp],
+        )
 end_time=time.time()
 
 
