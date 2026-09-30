@@ -8,9 +8,9 @@ from tensorflow.keras.layers import Dense
 from sklearn.metrics import r2_score, mean_squared_error
 
 # 1. 데이터
-# path = "./_data/ddarung/" # 상대경로
+path = "./_data/ddarung/" # 상대경로
 # path = "c:/study/_data/ddarung/" # 절대경로
-path = "c:\study\_data\ddarung/" # 슬래시 역슬래시 / 2개 상관없음, 섞어쓰기 되지만 가급적 비권장
+# path = "c:\study\_data\ddarung/" # 슬래시 역슬래시 / 2개 상관없음, 섞어쓰기 되지만 가급적 비권장
 # path = "c://study//_data//ddarung/"
 # path = "c:\\study\\_data\\ddarung/"
 
