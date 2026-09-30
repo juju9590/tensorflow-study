@@ -26,7 +26,7 @@ from sklearn.metrics import r2_score,mean_squared_error
 
 start_data = time.time()
 
-path="./_data/kaggle_jena/"
+path="./_data/kaggle_jena1/"
 
 xy_data = pd.read_csv(path+'jena_climate_2009_2016.csv', index_col=0)
 # print(xy_data.shape) #(420551, 14)
@@ -105,16 +105,16 @@ print(y_train.shape, y_test.shape) #(336096, 144, 1) (84024, 144, 1)
 # 데이터 저장
 data_path = "./_save/kaggle_jena1/"
 
-# np.save(data_path + "jena_x_train_yyy.npy", arr=x_train)
-# np.save(data_path + "jena_y_train_yyy.npy", arr=y_train)
-# np.save(data_path + "jena_x_test_yyy.npy", arr=x_test)
-# np.save(data_path + "jena_y_test_yyy.npy", arr=y_test)
+np.save(data_path + "jena_x_train_yyy.npy", arr=x_train)
+np.save(data_path + "jena_y_train_yyy.npy", arr=y_train)
+np.save(data_path + "jena_x_test_yyy.npy", arr=x_test)
+np.save(data_path + "jena_y_test_yyy.npy", arr=y_test)
 
 # # 데이터 불러오기
-x_train = np.load(data_path + "jena_x_train_yyy.npy")
-y_train = np.load(data_path + "jena_y_train_yyy.npy")
-x_test = np.load(data_path + "jena_x_test_yyy.npy")
-y_test = np.load(data_path + "jena_y_test_yyy.npy")
+# x_train = np.load(data_path + "jena_x_train_yyy.npy")
+# y_train = np.load(data_path + "jena_y_train_yyy.npy")
+# x_test = np.load(data_path + "jena_x_test_yyy.npy")
+# y_test = np.load(data_path + "jena_y_test_yyy.npy")
 
 # end_data = time.time()
 # print('데이터 불러오기 :', round(end_data-start_data,2),'초')
@@ -169,7 +169,7 @@ rlr = ReduceLROnPlateau(
 )
 
 model.fit(x_train, y_train, 
-    epochs=1, 
+    epochs=70, 
     batch_size=500,
     verbose=1,
     callbacks = [es, rlr ],
