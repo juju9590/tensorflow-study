@@ -145,6 +145,9 @@ print("=========================================================")
 y_pred = model.predict(x_test)
 y_pred = np.round(y_pred) # 반올림 처리
 
+print(x_test.shape)
+print(y_pred.shape)
+
 from sklearn.metrics import accuracy_score 
 
 acc_score = accuracy_score(y_test, y_pred)  

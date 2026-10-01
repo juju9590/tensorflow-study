@@ -7,7 +7,6 @@ from langchain_core.prompts import PromptTemplate
 
 import os
 from dotenv import load_dotenv
-
 load_dotenv()
 
 api_key = os.environ["MONOROUTER_API_KEY"].strip()

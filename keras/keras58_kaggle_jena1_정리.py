@@ -26,7 +26,7 @@ from sklearn.metrics import r2_score,mean_squared_error
 
 
 #1. 데이터
-'''
+
 ### 원본 데이터 가져오기
 path="./_data/kaggle_jena/"
 xy_data = pd.read_csv(path+'jena_climate_2009_2016.csv', index_col=0)
@@ -124,25 +124,24 @@ y_train = y_train.reshape(-1,144,1)
 y_test = y_test.reshape(-1,144,1)
 # print(y_train.shape) # (336067, 144, 1)
 # print(y_test.shape) #(83910, 144, 1)
-'''
 
 ### 데이터 저장
 data_path = "./_save/kaggle_jena/"
 
-# np.save(data_path + "jena_x_train_yyy.npy", arr=x_train)
-# np.save(data_path + "jena_y_train_yyy.npy", arr=y_train)
-# np.save(data_path + "jena_x_test_yyy.npy", arr=x_test)
-# np.save(data_path + "jena_y_test_yyy.npy", arr=y_test)
-# np.save(data_path + "jena_x_predict_yyy.npy", arr=x_predict)
-# np.save(data_path + "jena_y_col_yyy.npy", arr=y_col)
+np.save(data_path + "jena_x_train_yyy.npy", arr=x_train)
+np.save(data_path + "jena_y_train_yyy.npy", arr=y_train)
+np.save(data_path + "jena_x_test_yyy.npy", arr=x_test)
+np.save(data_path + "jena_y_test_yyy.npy", arr=y_test)
+np.save(data_path + "jena_x_predict_yyy.npy", arr=x_predict)
+np.save(data_path + "jena_y_col_yyy.npy", arr=y_col)
 
 # # 데이터 불러오기
-x_train = np.load(data_path + "jena_x_train_yyy.npy")
-y_train = np.load(data_path + "jena_y_train_yyy.npy")
-x_test = np.load(data_path + "jena_x_test_yyy.npy")
-y_test = np.load(data_path + "jena_y_test_yyy.npy")
-x_predict = np.load(data_path + "jena_x_predict_yyy.npy")
-y_col = np.load(data_path + "jena_y_col_yyy.npy")
+# x_train = np.load(data_path + "jena_x_train_yyy.npy")
+# y_train = np.load(data_path + "jena_y_train_yyy.npy")
+# x_test = np.load(data_path + "jena_x_test_yyy.npy")
+# y_test = np.load(data_path + "jena_y_test_yyy.npy")
+# x_predict = np.load(data_path + "jena_x_predict_yyy.npy")
+# y_col = np.load(data_path + "jena_y_col_yyy.npy")
 
 #2. 모델구성
 start_time=time.time()
@@ -192,8 +191,8 @@ rlr = ReduceLROnPlateau(
 )
 
 model.fit(x_train, y_train, 
-    epochs=1, 
-    batch_size=500,
+    epochs=50, 
+    batch_size=64,
     verbose=1,
     callbacks = [es, rlr ],
     validation_split = 0.2,
@@ -241,5 +240,20 @@ csv_path = "./_save/kaggle_jena/"
 submission.to_csv(csv_path + "jena_predict.csv", index=False, )
 
 
-
+# loss : 10.628629684448242
+# 1/1 [==============================] - 0s 405ms/step
+# r2 :  0.17043512126797278
+# rmse :  3.006360993027514
+#      T (degC)
+# 0    2.917473
+# 1    2.927423
+# 2    1.505763
+# 3   -0.343168
+# 4   -1.752261
+# ..        ...
+# 139 -0.975839
+# 140 -1.152327
+# 141 -1.330350
+# 142 -1.504272
+# 143 -1.684843
 

@@ -1,4 +1,5 @@
 # pmo : prompt -model - output
+# plp : prompt -llm - parser
 from langchain_core.prompts import PromptTemplate  #template : 틀
 
 
