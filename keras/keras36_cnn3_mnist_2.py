@@ -104,7 +104,7 @@ mcp = ModelCheckpoint(
 
 start_time=time.time()
 model.fit(x_train,y_train,
-          epochs=50, 
+          epochs=1, 
           batch_size=128, 
           verbose=1,
           validation_split=0.2,
@@ -119,9 +119,19 @@ loss = model.evaluate(x_test, y_test, verbose=1)
 print('loss : ', round(loss[0],2))
 print('acc : ', round(loss[1],2))
 
+print(x_test.shape) #(10000, 28, 28, 1)
+print(y_test.shape) #(10000, 10)
+
+
+
 y_pred = model.predict(x_test)
 y_pred = np.argmax(y_pred, axis=1)
 y_test = np.argmax(y_test, axis=1)
+
+print(y_pred.shape) #(10000,)
+print(y_test.shape) #(10000,)
+
+exit()
 
 acc_score = accuracy_score(y_test, y_pred)
 print('acc_score : ', acc_score)
