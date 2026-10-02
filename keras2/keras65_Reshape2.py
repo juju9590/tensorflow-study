@@ -1,4 +1,4 @@
-#36-3 copy
+#65-1 copy
 
 import numpy as np
 import pandas as pd
@@ -20,49 +20,47 @@ print(np.max(x_train), np.min(x_train)) # 255 0
 print(np.max(x_test), np.min(x_test)) # 255 0
 
 #### 스케일링 1
-x_train = x_train/255. # .만 붙이면 float 형태로 출력하게 됨
+x_train = x_train/255.
 x_test = x_test/255.
 print(np.max(x_train), np.min(x_train)) # 1.0 0.0 (0~1 사이로 나옴)
 print(np.max(x_test), np.min(x_test)) # 1.0 0.0
-# MinMaxScaler, MaxAbsScaler 와 동일, 이미지기 때문에 255로 나누면 동일한 값이 나온다.
 
 ##### y값 알아보기
-
 print(np.unique(y_train, return_counts=True))
 # (array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], dtype=uint8), 
-# array([5923, 6742, 5958, 6131, 5842, 5421, 5918, 6265, 5851, 5949],dtype=int64))
 
-from tensorflow.keras.layers import Reshape
+print(x_train.shape, y_train.shape) #(60000, 28, 28) (60000,)
+
+from tensorflow.keras.layers import Reshape, LSTM
 
 #2. 모델구성
 model = Sequential()
+model.add(Reshape(target_shape=(28,28,1), input_shape=(28,28))) # Reshape layer로 차원 변경, (N, 28, 28, 10) # 4차원
+model.add(Conv2D(64, (3,3)))  #4차원 (input_shape=(28, 28, 1) 생략할 수 있다 26, 26, 64
 
-model.add(Dense(280, input_shape=(28,28))) #(N, 28, 28) -> (N, 28, 280)
-model.add(Reshape(target_shape=(28,28,10)))
-
-model.add(Conv2D(64, (3,3), input_shape=(28, 28, 10))) 
-model.add(MaxPool2D()) 
-model.add(Conv2D(64, (3,3), activation='relu' )) 
+model.add(MaxPool2D())                           #13, 13, 64
+model.add(Conv2D(64, (3,3), activation='relu' )) #11, 11, 64
 model.add(Dropout(0.2))
-model.add(Conv2D(64, (3,3), activation='relu' )) 
-model.add(Conv2D(64, (3,3), activation='relu' )) 
+model.add(Conv2D(64, (3,3), activation='relu' )) #9, 9, 64
+model.add(Conv2D(64, (3,3), activation='relu' )) #7, 7, 64
+#################################################
+model.add(Reshape(target_shape=(7*7,64)))
+model.add(LSTM(10, return_sequences=True))     #(N, 7*7,10)
+#################################################
+# model.add(Reshape(target_shape=(7,7,10)))      # (N,7,7,10) GlobalAveragePooling2D() 받기위해 4차원으로 다시.
 
-# model.add(Flatten()) 
-model.add(GlobalAveragePooling2D()) 
+model.add(Flatten()) 
+# model.add(GlobalAveragePooling2D()) # 4차원을 받아서 2차원으로 줄여줌 
 
 model.add(Dense(units=32, activation='relu'))
 model.add(Dense(10, activation='softmax'))  
 
 model.summary()
-
+# exit()
 
 #3. 컴파일, 훈련
 model.compile(loss="sparse_categorical_crossentropy", optimizer='adam',
               metrics = ['acc'])
-
-# categorical_crossentropy : 원핫인코딩 따로 해줘야 함
-# sparse_categorical_crossentropy : 원핫인코딩 없이 사용 (원핫 포함하여 돌아감)
-
 
 es = EarlyStopping(
     monitor='val_loss',
@@ -109,11 +107,10 @@ model.fit(x_train,y_train,
 end_time=time.time()
 
 # 4. 평가, 예측
-print( "=============model.evaluate=================")
 loss = model.evaluate(x_test, y_test, verbose=1)
 
-print('loss : ', round(loss[0],2))
-print('acc : ', round(loss[1],2))
+print('loss : ', round(loss[0],4))
+print('acc : ', round(loss[1],4))
 
 print(x_test.shape) #(10000, 28, 28, 1)
 print(y_test.shape) #(10000,)
@@ -136,10 +133,10 @@ print ('걸린시간 : ', round(end_time-start_time,2),'초' )
 # 걸린시간 :  79.84 초
 
 
-# loss :  0.04
+# loss :  0.03
 # acc :  0.99
-# acc_score :  0.9899
-# 걸린시간 :  85.4 초
+# acc_score :  0.9923
+# 걸린시간 :  89.11 초
 
 
 
