@@ -41,10 +41,11 @@ from tensorflow.keras.layers import Dense, Embedding, SimpleRNN
 
 model = Sequential()
 
-# 2차원 입력 => 3차원으로 출력
+# 임베딩은 2차원 입력 => "3차원"으로 출력
+# 그래서,,, 임베딩 다음엔 보통 RNN계열 모델이 붙는다
 
 ############# 임베딩 1 ############
-model.add(Embedding(input_dim=30, output_dim=10 ,input_length=5))
+model.add(Embedding(input_dim=30, output_dim=10 ,input_length=5)) #input_length=5 행무시 열우선
 model.add(SimpleRNN(10))
 model.add(Dense(1))
 # input_dim : 단어사전의 갯수
@@ -61,7 +62,7 @@ input_dim=30          output_dim=10 : 백터 데이터화
 
                         벡터의 모임에서 한 열씩 디멘션 이라고 하고,, 벡터 자체는 하나의 값이다.
 '''
-
+## 백터DB
 
 # _________________________________________________________________
 #  Layer (type)                Output Shape              Param #   
