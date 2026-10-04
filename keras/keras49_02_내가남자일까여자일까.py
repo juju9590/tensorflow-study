@@ -2,7 +2,7 @@
 # 실습 :  acc 0.94~97
 
 import numpy as np
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.preprocessing.image import ImageDataGenerator, img_load, img_to_array
 
 from tensorflow.python.keras.models import Sequential, load_model
 from tensorflow.python.keras.layers import Dense, Conv2D, Flatten, Dropout, MaxPool2D, GlobalAveragePooling2D
@@ -88,12 +88,3 @@ print(y_pred_tori, y_pred_tori.shape ) #
 # 예측 클래스 : [0]
 # =========== 토리 예측===============
 # [[0.2299]] (1, 1)
-
-
-
-
-
-
-
-
-
