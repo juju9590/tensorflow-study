@@ -33,10 +33,10 @@ start_model=time.time()
 
 # 모델 저장 경로 및 이름
 model_path ='./_save/image/men_women/'
-filename = 'men_women_1004_'
+filename = 'men_women_1005.keras'
 
 # 모델 불러오기
-model = load_model(model_path + filename + ".keras")
+model = load_model(model_path + filename)
 
 end_model=time.time()
 print("모델/훈련 걸린시간 :", round(end_model-start_model,2),"초")
@@ -115,7 +115,17 @@ print("토리 사진 예측 :", y_pred_tori)
 # 성별 : [1] 내 사진 : [[0.760272]]
 # 내 사진 예측 : [[1.]] ===> True
 
-
+# 결과(epoch=100)
+# data 걸린시간 : 20.602 초
+# 모델/훈련 걸린시간 : 2.94 초
+# loss :  1.596  
+# acc :  0.869
+# acc_score : 0.869
+# ====== 내 사진 예측 ======
+# 성별 : [1] 내 사진 : [[7.658865e-19]]
+# 내 사진 예측 : [[0.]]
+# 성별 : [0] 토리 사진 : [[0.06729072]]
+# 토리 사진 예측 : [[0.]]
 
 
 

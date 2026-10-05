@@ -21,9 +21,9 @@ start_data = time.time()
 
 # 최종 데이터 불러오기(경로 및 파일네임)
 data_aug_path = './_save/image/men_women/'
-data_aug_filename = 'men_woman_aug_plus_'
+data_aug_filename = 'men_woman_aug_1005_'
 data_path = './_save/image/men_women/'
-data_filename = 'men_women_1004_'
+data_filename = 'men_women_1005_'
 
 x_train = np.load(data_aug_path + data_aug_filename + 'x_train.npy' )
 y_train = np.load(data_aug_path + data_aug_filename + 'y_train.npy' )
@@ -38,7 +38,7 @@ start_model = time.time()
 
 # 모델 저장 경로 및 이름
 model_aug_path = './_save/image/men_women/'
-model_aug_filename = 'men_womne_aug_model.keras'
+model_aug_filename = 'men_womne_aug_1005_model.keras'
 
 # 전체 모델 불러오기
 model = load_model(model_aug_path + model_aug_filename)
@@ -135,6 +135,16 @@ print("토리 사진 예측 :", y_pred_tori)
 # 토리 사진 예측 : [[1.]] ===>토리는 고양이, 여자로 나옴
 
 
-
-
-
+# 결과 2차
+# data 걸린시간 : 24.987 초
+# 모델/훈련 걸린시간 : 3.121 초
+# loss :  0.914
+# acc :  0.868
+# 평가 걸린시간 : 13.962 초
+# acc_score :  0.868
+# 예측/정확도 걸린시간 : 13.962 초
+# ====== 내 사진 예측 ======
+# 성별 : [1] 내 사진 : [[1.2108638e-11]]
+# 내 사진 예측 : [[0.]]
+# 성별 : [0] 토리 사진 : [[4.8231443e-05]]
+# 토리 사진 예측 : [[0.]]

@@ -39,13 +39,16 @@ x_train, x_test, y_train, y_test = train_test_split(
     shuffle=True,
     stratify=y, #y 클래스의 비율에 맞춰 분리하다
 )
+x_train = x_train.astype('float32')
+x_test = x_test.astype('float32')
+
 print(x_train.shape, x_test.shape) #(19016, 150, 150, 3) (8151, 150, 150, 3)
 print(y_train.shape, y_test.shape) #(19016,) (8151,)
-''' 
+'''
 
 # 데이터 저장 경로
 data_path = './_save/image/men_women/'
-data_filename = 'men_women_1004_'
+data_filename = 'men_women_1005_'
 
 # # 데이터 저장하기
 # np.save(data_path + data_filename + 'x_train.npy', arr=x_train)
@@ -64,7 +67,7 @@ print('data 걸린시간 :', round(end_data-start_data, 3),"초")
 
 #2. 모델 구성
 start_model=time.time()
-'''
+
 model = Sequential()
 
 model.add(Conv2D(128, (3,3), input_shape=(150,150,3))) # 행무시열우선 
@@ -89,29 +92,29 @@ model.compile(
 )
 model.fit(
     x_train, y_train,
-    epochs=1,
-    batch_size=64,
+    epochs=70,
+    batch_size=32,
     validation_split=0.2,
     shuffle=True,
 
 )
-'''
+
 
 # 모델 저장 경로 및 이름
 model_path ='./_save/image/men_women/'
-filename = 'men_women_1004_'
+filename = 'men_women_1005.keras'
 
 # 전체 모델 저장하기 
-# model.save(model_path + filename + ".keras" )
+model.save(model_path + filename)
 
 # 모델 불러오기
-model = load_model(model_path + filename + ".keras")
+# model = load_model(model_path + filename)
 
 end_model=time.time()
 print("모델/훈련 걸린시간 :", round(end_model-start_model,2),"초")
 
 #4. 평가, 예측
-results = model.evaluate(x_test, y_test)
+results = model.evaluate(x_test, y_test, batch_size=16, verbose=1,)
 print('loss : ', round(results[0],3))
 print('acc : ', round(results[1],3))
 
@@ -121,18 +124,24 @@ y_pred = np.round(y_pred) #이진분류는 0 or 1로 분류, 반올림하여 1, 
 acc = accuracy_score(y_pred, y_test)
 print("acc_score :", round(acc,3) )
 
-# 결과
+# 결과(epoch=1)
 # data 걸린시간 : 107.913 초 (저장)
 # 모델/훈련 걸린시간 : 338.19 초
 # loss :  0.424
 # acc :  0.797
 # acc_score : 0.7972027972027972
 
-# 결과 (불러오기)
+# 결과 (불러오기)(epoch=1)
 # data 걸린시간 : 7.161 초 (불러오기)
 # 모델/훈련 걸린시간 : 0.44 초
 # loss :  0.424
 # acc :  0.797
 # acc_score : 0.797
 
+# 결과 (epoch=100)
+# data 걸린시간 : 286.783 초
+# 모델/훈련 걸린시간 : 2029.42 초
+# loss :  1.596
+# acc :  0.869
+# acc_score : 0.869
 
