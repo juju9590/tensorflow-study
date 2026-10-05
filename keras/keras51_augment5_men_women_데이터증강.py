@@ -1,4 +1,6 @@
 # 데이터 증강 실습
+import os
+os.environ["TF_GPU_ALLOCATOR"] = "cuda_malloc_async" #메모리 모으기
 
 from tensorflow.keras.preprocessing.image import load_img
 from tensorflow.keras.preprocessing.image import img_to_array
@@ -19,9 +21,10 @@ from sklearn.metrics import accuracy_score
 # 1. 데이터
 start_data = time.time()
 
+'''
 # 데이터 저장 경로
 data_path = './_save/image/men_women/'
-data_filename = 'men_women_1004_'
+data_filename = 'men_women_1005_'
 
 # 데이터 불러오기
 x_train = np.load(data_path + data_filename + 'x_train.npy')
@@ -99,32 +102,32 @@ y_train = np.concatenate((y_train, y_aug_woman))
 
 # print(x_train.shape, y_train.shape) #(24716, 150, 150, 3) (24716,)
 # print(np.unique(y_train, return_counts=True)) #(array([0., 1.], dtype=float32), array([12374, 12342]))
+'''
+# # 데이터증강 포함 데이터 저장
+# data_aug_path = './_save/image/men_women/'
+# data_aug_filename = 'men_woman_aug_1005_'
+
+# np.save(data_aug_path + data_aug_filename + 'x_train.npy', arr=x_train)
+# np.save(data_aug_path + data_aug_filename + 'y_train.npy', arr=y_train)
+
+# 최종 데이터 불러오기(경로 및 파일네임)
+data_aug_path = './_save/image/men_women/'
+data_aug_filename = 'men_woman_aug_1005_'
+data_path = './_save/image/men_women/'
+data_filename = 'men_women_1005_'
+
+x_train = np.load(data_aug_path + data_aug_filename + 'x_train.npy' )
+y_train = np.load(data_aug_path + data_aug_filename + 'y_train.npy' )
+x_test = np.load(data_path + data_filename + 'x_test.npy')
+y_test = np.load(data_path + data_filename + 'y_test.npy')
 
 
 end_data = time.time()
 print('data 걸린시간 :', round(end_data-start_data, 3),"초")
 
-# 데이터증강 포함 데이터 저장
-data_aug_path = './_save/image/men_women/'
-data_aug_filename = 'men_woman_aug_plus_'
-
-np.save(data_aug_path + data_aug_filename + 'x_train.npy', arr=x_train)
-np.save(data_aug_path + data_aug_filename + 'y_train.npy', arr=y_train)
-
-# 최종 데이터 불러오기(경로 및 파일네임)
-# data_aug_path = './_save/image/men_women/'
-# data_aug_filename = 'men_woman_aug_plus_'
-# data_path = './_save/image/men_women/'
-# data_filename = 'men_women_1004_'
-
-# x_train = np.load(data_aug_path + data_aug_filename + 'x_train.npy' )
-# y_train = np.load(data_aug_path + data_aug_filename + 'y_train.npy' )
-# x_test = np.load(data_path + data_filename + 'x_test.npy')
-# y_test = np.load(data_path + data_filename + 'y_test.npy')
-
 #2. 모델구성
 start_model = time.time()
-
+'''
 model = Sequential()
 
 model.add(Conv2D(64, (3,3), input_shape=(150,150,3)))
@@ -149,24 +152,25 @@ model.compile(
 
 model.fit(
     x_train, y_train,
-    epochs=1,
-    batch_size=128,
+    epochs=50,
+    batch_size=32,
     validation_split=0.2,
     shuffle=True,
     # callbacks=['es','mcp', 'rlr'],
 )
+'''
 end_model = time.time()
 print('모델/훈련 걸린시간 :', round(end_model-start_model, 3),"초")
 
 # 모델 저장 경로 및 이름
 model_aug_path = './_save/image/men_women/'
-model_aug_filename = 'men_womne_aug_model.keras'
+model_aug_filename = 'men_womne_aug_1005_model.keras'
 
 # 전체 모델 저장
-model.save(model_aug_path + model_aug_filename)
+# model.save(model_aug_path + model_aug_filename)
 
 # 전체 모델 불러오기
-# model = load_model(model_aug_path + model_aug_filename)
+model = load_model(model_aug_path + model_aug_filename)
 
 #4. 평가, 예측
 results = model.evaluate(x_test, y_test)
@@ -185,6 +189,14 @@ print("acc_score : ", round(acc_score,3))
 # loss :  0.397
 # acc :  0.823
 # acc_score :  0.823
+
+# 결론 (epoch=50)
+# data 걸린시간 : 25.093 초 (데이터 불러오기)
+# 모델/훈련 걸린시간 : 972.329 초
+# loss :  0.914
+# acc :  0.868
+# acc_score :  0.868
+
 
 
 
