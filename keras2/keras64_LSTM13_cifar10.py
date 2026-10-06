@@ -9,7 +9,8 @@ import pandas as pd
 import time
 
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Conv2D, Dense, Dropout, Flatten, MaxPooling2D, GlobalAveragePooling2D
+from tensorflow.keras.layers import Conv2D, Dense, Dropout, Flatten, LSTM
+from tensorflow.keras.layers import MaxPooling2D, GlobalAveragePooling2D
 from sklearn.metrics import accuracy_score
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 
@@ -23,11 +24,10 @@ x_train = x_train/255.0
 x_test = x_test/255.0
 
 #RNN 모델 적용을 위해  3차원으로 변경
-x_train = x_train.reshape(-1, 32, 32)
-x_test = x_test.reshape(-1, 32, 32)
-print(x_train.shape, x_test.shape)
-
-exit()
+x_train = x_train.reshape(-1, 32, 32) 
+x_test = x_test.reshape(-1, 32, 32) 
+print(x_train.shape, x_test.shape) #(150000, 32, 32) (30000, 32, 32)
+print(y_train.shape, y_test.shape) #(50000, 1) (10000, 1)
 
 #2. 모델구성
 model = Sequential()
