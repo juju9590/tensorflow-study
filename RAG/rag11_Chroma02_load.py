@@ -42,20 +42,25 @@ embeddings = OpenAIEmbeddings(
     # dimensions=10,   
 )
 
+# 불러오기
 DB_path ='./_db/Chroma_11/'
 db = Chroma(
     embedding_function=embeddings,
-    persist_directory=DB_path, #지속가능한 디렉토리
-    collection_name='chroma11',
+    persist_directory=DB_path,  # 지속가능한 디렉토리
+    collection_name='chroma11', # 저장된 DB불러올때 설정한 이름으로 불러온다.
 )
 
 # 저장된 데이터 확인
 print("=========================")
 print(db.get())
 print("=========================")
-aaa = db.similarity_search("삼성전자 사업전망에 대해 알려줘", k=2) # 유사도 검색
-# 요청한 문장과 비슷한 2개 골라줘
+aaa = db.similarity_search("삼성전자 사업전망에 대해 알려줘", k=2) 
+# aaa = db.similarity_search("엔비디아 사업전망에 대해 알려줘", k=2) 
+# 유사도 검색
+# 요청한 문장과 비슷한 2개 골라줘 # 디폴트 = 4
 print(aaa)
+
+
 
 
 

@@ -158,7 +158,7 @@ model.add(Reshape(target_shape=(9,64)))
 model.add(LSTM(64, activation='relu' ))
 
 model.add(Flatten())
-# model.add(GlobalAveragePooling2D()) # n, 128
+# model.add(GlobalAveragePooling2D()) # n, 128 (4차원으로 받아서  2차원 출력)
 
 model.add(Dense(64))
 model.add(Dense(32))

@@ -51,6 +51,7 @@ embeddings = OpenAIEmbeddings(
     # dimensions=10,   
 )
 
+# 저장하기 
 DB_path ='./_db/Chroma_11/'
 db = Chroma.from_documents(
     documents=split_doc1 + split_doc2,
@@ -62,7 +63,7 @@ db = Chroma.from_documents(
 print("Chroma 문서저장 끝")
 
 
-
+# 청크 1 = [Document ... , 1개
 
 
 
