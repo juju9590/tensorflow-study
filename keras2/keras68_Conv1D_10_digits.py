@@ -24,38 +24,36 @@ x_train, x_test, y_train, y_test = train_test_split(x, y,
                                     stratify=y,
                                     )
 
-
-
 from sklearn.preprocessing import MinMaxScaler, StandardScaler, MaxAbsScaler, RobustScaler
 scaler = RobustScaler() 
 x_train = scaler.fit_transform(x_train)  
 x_test = scaler.transform(x_test)    
-print(np.min(x_train), np.max(x_train)) # 0.0 1.0
-print(np.min(x_test), np.max(x_test)) # 0.0 2.0
+print(np.min(x_train), np.max(x_train)) # -2.6 16.0
+print(np.min(x_test), np.max(x_test)) # -2.6 16.0
 
-print(x_train.shape, x_test.shape) # (1437, 64) (360, 64)
-print(y_train.shape, y_test.shape) # (1437,) (360,)
+# print(x_train.shape, x_test.shape) # (1437, 64) (360, 64)
+# print(y_train.shape, y_test.shape) # (1437,) (360,)
 
 # Conv2D >>> Conv1D
 x_train = x_train.reshape(-1,64,1)
 x_test = x_test.reshape(-1,64,1)
-print(x_train.shape, x_test.shape) # 
-print(y_train.shape, y_test.shape) #
+# print(x_train.shape, x_test.shape) # (1437, 64, 1) (360, 64, 1)
+# print(y_train.shape, y_test.shape) # (1437,) (360,)
 
 #2. 모델구성
 model = Sequential()
 
 model.add(Conv1D(64, 2, input_shape=(64, 1))) 
-model.add(Conv1D(32, 2 , activation='relu' )) 
-model.add(MaxPooling1D())
-model.add(Conv1D(16, 2, padding='same', activation='relu' )) 
+model.add(Conv1D(64, 2 , activation='relu' )) 
+model.add(Conv1D(64, 2, padding='same', activation='relu' )) 
+# model.add(MaxPooling1D())
 
-model.add(GlobalAveragePooling1D())
-# model.add(Flatten())
+# model.add(GlobalAveragePooling1D())
+model.add(Flatten())
 
 model.add(Dense(64, activation='relu'))
-model.add(Dropout(0.2))
 model.add(Dense(32, activation='relu'))
+model.add(Dense(16, activation='relu'))
 
 model.add(Dense(10, activation='softmax'))
 
@@ -103,4 +101,18 @@ print("acc_score :", acc_score)
 # loss : 0.053280770778656006
 # acc : 0.9888888597488403
 # acc_score : 0.9888888888888889
+
+####### cnn2D >> Conv1D
+# loss : 0.261295348405838
+# acc : 0.9361110925674438
+# acc_score : 0.9361111111111111
+# 걸린시간 : 4.61 초
+
+####### cnn2D >> Conv1D
+# loss : 0.22027607262134552
+# acc : 0.9583333134651184
+# acc_score : 0.9583333333333334
+# 걸린시간 : 4.19 초
+
+
 

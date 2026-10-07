@@ -12,6 +12,7 @@ load_dotenv()
 api_key = os.environ["MONOROUTER_API_KEY"].strip()
 base_url='https://monogpt.kr/api/monorouter/v1'
 
+"""
 from glob import glob
 
 # 폴더에서 텍스트 파일 목록 가져오기 
@@ -79,8 +80,9 @@ texts = Text_splitter.split_documents(data)
 # print("두번째 청크의 내용 : ",  texts[1].page_content) # 내용만
 # print("두번째 청크의 길이 : ",  len(texts[1].page_content)) #154
 # print("첫번째 청크의 내용 : ",  texts[1]) 
+"""
 
-# 임베딩 준비 
+#03. 임베딩 준비 
 from langchain_openai import OpenAIEmbeddings
 embeddings = OpenAIEmbeddings(
     model="text-embedding-3-small",
@@ -88,17 +90,27 @@ embeddings = OpenAIEmbeddings(
     base_url=base_url,  
 )
 
-sample_text = '삼성전자 창업주는?'
-vector = embeddings.embed_query(sample_text)
-# print(vector)
-# print(len(vector)) # 1536 차원
+# sample_text = '삼성전자 창업주는?'
+# vector = embeddings.embed_query(sample_text)
+# # print(vector)
+# # print(len(vector)) # 1536 차원
+
+
+DB_path ='./_db/Chroma_12/'
 
 # 저장하기 
-DB_path ='./_db/Chroma_12/'
-vector_store = Chroma.from_documents(
-    documents=texts,
-    embedding=embeddings,
-    persist_directory=DB_path, #지속가능한 디렉토리
+# vector_store = Chroma.from_documents(
+#     documents=texts,
+#     embedding=embeddings,
+#     persist_directory=DB_path, #지속가능한 디렉토리
+#     collection_name='chroma12',
+# )
+
+# 불러오기
+vector_store = Chroma(
+    embedding_function=embeddings, 
+    # 어떤 임베딩을 사용할껀지 있기때문에 임베딩 준비는 남겨야 한다.
+    persist_directory=DB_path, 
     collection_name='chroma12',
 )
 
@@ -106,7 +118,7 @@ print(f"벡터 DB에 저장된 문서 개수: {vector_store._collection.count()}
 # 벡터 DB에 저장된 문서 개수: 56
 
 
-query = "토리는 고양이인가? 강아지인가?"
+query = "삼성전자는 어떤 기업인가요?"
 result = vector_store.similarity_search(query)
 print(f"검색 결과의 길이: {len(result)}") 
 # 검색 결과의 길이: 4 >>> K 디폴트가 4
