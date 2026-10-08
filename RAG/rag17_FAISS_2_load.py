@@ -8,10 +8,10 @@ from langchain_chroma import Chroma
 # Chroma : 코사인 유사도 기반 (통상적으로)
 
 # pip install faiss-cpu
-import faiss 
+import faiss  # faiss 자체적으로 제공
 # faiss : 유클리드 거리 기반 (통상적으로)
 # 검색에 강력
-from langchain_community.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS # 랭체인에서 제공
 from langchain_community.docstore.in_memory import InMemoryDocstore
 
 from dotenv import load_dotenv
