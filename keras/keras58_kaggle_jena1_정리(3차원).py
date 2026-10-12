@@ -39,7 +39,8 @@ y_col = xy_data[-144:]['T (degC)'] # 예측값 정답지
 y_col = y_col.to_numpy()
 # print(type(y_col)) #<class 'numpy.ndarray'>
 
-x_data = xy_data[:-288].drop(['T (degC)'],axis=1) #x학습은 뒤에서 288행 제외
+x_data = xy_data[:-288].drop(['T (degC)'],axis=1) 
+#x학습은 뒤에서 288행 제외
 # print(x_data.shape) #(420263, 13)
 
 y_data = xy_data[144:-144]['T (degC)'] #y학습은 앞에서 144행, 뒤에서 144행 제외
