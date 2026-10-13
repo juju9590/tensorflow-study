@@ -95,12 +95,12 @@ mcp = ModelCheckpoint(
 
 start_time=time.time()
 model.fit(x_train,y_train,
-          epochs=100, 
-          batch_size=2048, 
-          verbose=1,
-          validation_split=0.2,
-          callbacks = [es, rlr, mcp],
-          )
+    epochs=100, 
+    batch_size=2048, 
+    verbose=1,
+    validation_split=0.2,
+    callbacks = [es, rlr, mcp],
+    )
 end_time=time.time()
 
 # 4. 평가, 예측

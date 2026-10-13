@@ -230,7 +230,7 @@ model.summary()
 
 #3. 컴파일, 훈련
 
-learning_rate = 0.0009
+learning_rate = 0.0001
 
 model.compile(
     loss="mse", 
