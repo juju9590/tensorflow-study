@@ -48,7 +48,7 @@ pdf_files = glob(os.path.join(path, '*.pdf'))
 # pdf_texts = Text_splitter.split_documents(data)
 # # print("생성된 텍스트 청크 수 : ", len(pdf_texts)) #161 
 
-#03. 임베팅
+#03. 임베딩
 from langchain_openai import OpenAIEmbeddings
 embeddings = OpenAIEmbeddings(
     model="text-embedding-3-small",

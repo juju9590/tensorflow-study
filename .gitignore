@@ -18,5 +18,10 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 
-
+.csv
 .env
+
+mini_pj/data/
+mymy/readable_text/
+mymy/DB_sample/
+mymy/search_csv/
