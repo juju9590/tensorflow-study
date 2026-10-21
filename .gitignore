@@ -18,9 +18,16 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 
-.csv
+# CSV 전체 제외
+*.csv
+
+# JSON 전체 제외하고 싶다면
+*.json
+
+# 환경변수
 .env
 
+# 특정 폴더 제외
 mini_pj/data/
 mymy/readable_text/
 mymy/DB_sample/
