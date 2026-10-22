@@ -1,0 +1,16 @@
+# 2025 regional council minutes: GPU embedding pilot
+# Python 3.11 / Windows / NVIDIA GPU
+# The CUDA 12.8 PyTorch build matches the tested home environment.
+# On a second PC, verify its NVIDIA driver supports this build.
+--extra-index-url https://download.pytorch.org/whl/cu128
+
+torch==2.8.0+cu128
+sentence-transformers
+pandas
+numpy
+scikit-learn
+tqdm
+psutil
+
+# Hugging Face model (downloaded on first run, not a pip package):
+# dragonkue/snowflake-arctic-embed-l-v2.0-ko
