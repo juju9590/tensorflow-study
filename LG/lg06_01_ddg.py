@@ -1,0 +1,122 @@
+# Tool calling : 외부 기능을 가져와서 사용하기!!!
+
+
+from langchain_openai import ChatOpenAI
+import os
+
+from dotenv import load_dotenv
+load_dotenv()
+
+api_key = os.environ["MONOROUTER_API_KEY"].strip()
+base_url='https://monogpt.kr/api/monorouter/v1'
+
+# 모델 준비
+llm = ChatOpenAI(
+    model_name='gpt-5.6-terra', 
+    temperature=0,   
+    max_tokens=3000,               
+    api_key=api_key, 
+    base_url=base_url, 
+)
+
+##### 0. TOOL 정의 #####
+# # pip install langchain-tavily
+# from langchain_tavily import TavilySearch
+
+# # 웹 검색 도구 생성
+# web_search = TavilySearch(
+#     max_results=5  # 검색결과 3가지 정도 가져오겠다
+# )
+
+#pip install ddgs
+from langchain_community.utilities import DuckDuckGoSearchAPIWrapper
+from langchain_community.tools import DuckDuckGoSearchRun
+
+web_search = DuckDuckGoSearchRun(
+    max_results=5 ,
+)
+
+# result = web_search.invoke({
+#     "query" : "삼성전자의 어제 종가 알려줘"
+# })
+
+# print(result)
+
+# exit()
+
+tools = [web_search] # 2개이상 검색엔진들어갈 수 있어 리스트로 묶는다
+
+llm_with_tools = llm.bind_tools(tools)
+
+from typing import Annotated,TypedDict  # state에 필요
+from langgraph.graph import StateGraph, START, END
+from langgraph.graph.message import add_messages #reducer
+from langgraph.prebuilt import ToolNode, tools_condition
+
+##### 1. State 정의 #####
+class State(TypedDict):
+    messages : Annotated[list, add_messages]
+
+##### 2. 노드 정의 #####
+def chatbot(state : State):
+    return {"messages":[llm_with_tools.invoke(state['messages'])]}
+
+##### 3. 그래프 구성, 노드 추가 #####
+graph_builder = StateGraph(State)  #상속받은 State  그래프 준비
+
+graph_builder.add_node("chatbot", chatbot)
+
+# tool_node = ToolNode(tools)  # 노드를 하나 만들어줌
+# graph_builder.add_node("tools", tool_node)
+
+graph_builder.add_node("tools", ToolNode(tools)) #한줄로
+
+#  그래프 모델 그림
+# start - chatbot  - end
+#        ㄴ tools  
+
+##### 4. 엣지 추가 ######
+# graph_builder.add_edge(START, "chatbot") 
+# graph_builder.add_edge("chatbot", "tools") 
+# graph_builder.add_edge("tools", END) 
+# 요거는 "start - chatbot - tools  - end" 로 진행되는 엣지
+
+graph_builder.add_edge(START, "chatbot") 
+
+# graph_builder.add_edge("chatbot", "tools") 
+graph_builder.add_conditional_edges(        #조건부 엣지
+    "chatbot", 
+    tools_condition # 조건문 : 조건에 맞는 값으로 분기
+    # tool_calls 가 있으면 'tools'반환
+    # tool_calls 가 없으면 END 반환 (tools_condition에 END 포함)
+    # 요건 chatbot model이 판단
+)  
+
+graph_builder.add_edge("tools", "chatbot") 
+
+##### 5. 컴파일 #####
+graph = graph_builder.compile()
+
+##### 6. 그래프 실행 #####
+query = '에코프로 오늘 주가 알려줘'
+
+response = graph.invoke({
+    "messages" : [("user", query)]
+}) 
+
+##### 7. 결과 출력 #####
+print("AI :", response['messages'][-1].content) #[-1] 가장 마지막 메시지
+
+
+# AI : 에코프로(086520)는 오늘 기준 약 **79,500원**으로, 
+# **전일 대비 -9.66%** 수준으로 조회됩니다.
+# 다만 장중에는 가격이 계속 변동하므로, 
+# 주문 전에는 증권사 앱이나 한국거래소 시세에서 실시간 가격을 다시 확인하세요.
+
+
+
+
+
+
+
+
