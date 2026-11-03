@@ -8,8 +8,7 @@ x, y = load_iris(return_X_y=True)
 # print(x,y)
 # print(x.shape, y.shape) #(150, 4) (150,)
 
-n_split = 5
-kfold = KFold(n_splits=n_split, shuffle=True, random_state=999999) #클래스
+
 
 
 #02. 모델

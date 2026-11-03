@@ -2,7 +2,6 @@ import numpy as np
 from sklearn.datasets import fetch_california_housing
 from sklearn.model_selection import train_test_split, KFold, cross_val_score #교차검증
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import r2_score, mean_squared_error
 
 
 #01. 데이터
