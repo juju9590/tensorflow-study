@@ -35,6 +35,9 @@ xgb = XGBClassifier()
 model = GridSearchCV(xgb, parameters, cv=kfold,  # 210번 돌아감(42*5)
              verbose=1,
              n_jobs=-1, #cpu 다 돌리기
+            #  random_state=333,#오류남, 왜? 그리드서치CV는 전체 다 돌리기 때문에 파라미터 없음
+             refit=True, #사실은 최적의 파라미터로 1번 더 돌아가기 때문에  211번 실행
+            #  refit=False, # 최적의 파라미터를 알 수 없기때문에 오류남
              )
 
 # GridSearchCV는 알고리즘인데  xgb모델을 랩핑한 내용이다
