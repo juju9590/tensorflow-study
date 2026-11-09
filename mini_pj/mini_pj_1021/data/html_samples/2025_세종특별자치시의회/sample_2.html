@@ -1,0 +1,84 @@
+<form name="dfrm">    <input type="hidden" name="mntsId" id="mntsId" value="6429" />    <input type="hidden" name="mntsGnrtn" id="mntsGnrtn" value="4" /></form><h2><a name="con_top" id="con_top">바로가기</a></h2><ul class="skipUl">    <li class="li1"><a href="#skip-content">본문으로 바로가기</a></li>    <li class="li2"><a href="#skip-functionMenu">기능메뉴 메뉴 바로가기</a></li>    <li class="li3"><a href="#skip-settingMenu">설정메뉴 메뉴 바로가기</a></li></ul><hr /><div id="minutesViewer">     <!-- minutesTop -->    <div id="minutesTop">        <div class="title">            <h1><img src="/images/egovframework/com/scc/mnts/councilmark.png" alt="세종특별자치시의회" /></h1>        </div>        <h3>제96회 개회식 본회의(2025.02.04 화요일)</h3>        <h2>기능메뉴</h2>        <div name="skip-functionMenu" id="skip-functionMenu">            <div id="topFunction">                <div id="topFunctionArea">                    <div class="sidebar_control"> <a href="#" onclick="openNav2()"><img src="/images/egovframework/com/scc/mnts/sidebar_right.gif" alt="사이드 ON" /></a> </div>                    <div class="minutessearch">                        <form name="searchfrm" method="post" onsubmit="return getKeywordFormChk();" action="/cms/mntsKeywordViewer.do?#pos1">                            <fieldset>                                <legend>회의록검색</legend>                                <input type="hidden" name="mntsId" id="mntsId2" value="6429" />                                <label for="var07" class="skiplabel">회의록검색</label>                                <input type="text" name="var07" id="var07" class="text_minutesSearch"  />                                <input type="submit" value="검색" class="submit_searchBtn" />                            </fieldset>                        </form>                    </div>                    <div class="sidemenu">                        <ul>                            <li>                                <a href="/cms/CmsHwpDownload.do?id=6429" target="_blank" title="원문 파일을 다운받습니다." class="filedown1">원본</a> </li>                            <li><a href="/html/mntsPrint.html" onclick="window.open(this.href, 'printPage', 'width=980,height=600,top=100,left=100,scrollbars=yes,resizable=no'); return false;" title="프린터 페이지, 새창으로 이동"><img src="/images/egovframework/com/scc/mnts/topbtn_print.png" alt="프린터" /></a></li>                        </ul>                    </div>                    <div class="fontsetting">                        <ul>                            <li><a href="#" onclick="fontToggle(2);" title="폰트를 크게 합니다."><img src="/images/egovframework/com/scc/mnts/topbtn_fontPlus.png" alt="크게" /></a></li>                            <li><a href="#" onclick="sDefault();" title="폰트를 원래 크기로 합니다."><img src="/images/egovframework/com/scc/mnts/topbtn_fontNormal.png" alt="보통" /></a></li>                            <li><a href="#" onclick="fontToggle(-2);" title="폰트를 작게 합니다."><img src="/images/egovframework/com/scc/mnts/topbtn_fontMinus.png" alt="작게" /></a></li>                        </ul>                    </div>                    <div class="close"> <a href="#;" title="창을 닫습니다." onclick="window.close();return false;"><img src="/images/egovframework/com/scc/mnts/topbtn_close.png"  alt="닫기" /></a> </div>                </div>            </div>        </div>        <p class="skip"><a href="#con_top">맨위로 이동</a></p>        <hr />    </div>    <!--// minutesTop -->     <!-- minutesLeft -->     <!-- 사이드바 -->    <div id="mySidenav2" class="sidenav">        <div class="sidenav_top">            <h1><img src="/images/egovframework/com/scc/mnts/councilmark.png" alt="세종특별자치시의회" /></h1>            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> </div>        <div id="minutesLeft">            <div id="minutesLeftArea">                <h2>설정메뉴</h2>                <div name="skip-settingMenu" id="skip-settingMenu">                     <!-- 발언자 -->                    <div class="speaker">                        <h3><a href="#" id="h3_btn1">발언자</a></h3>                        <div class="listbox" id="listbox1" style="display:none" >                            <form method="post" name="speakerfrm" id="speakerfrm">                                <fieldset>                                    <legend>발언자 선택</legend>                                    <ul>                                        <li>                                                    <input type="checkbox" name="SPKRMBR" id="SPKRMBR1" value="spkr0016" class="checkbox_normal" />                                                        <label for="SPKRMBR1">의정담당관 진정옥</label>                                                </li><li>                                                    <input type="checkbox" name="SPKRMBR" id="SPKRMBR2" value="spkrMBR000044" class="checkbox_normal" />                                                        <label for="SPKRMBR2">의장 임채성</label>                                                </li></ul>                                    <div class="btnarea"> <a href="#;" onclick="setSpeakerView();" class="abtn_select">발언보기</a> <a href="#;" onclick="setSpeakerReset();" class="abtn_deselect">선택취소</a> </div>                                </fieldset>                            </form>                        </div>                    </div>                    <!--// 발언자 -->                     <!-- 안건 -->                    <div class="agenda">                        <h3><a href="#" id="h3_btn2">안건</a></h3>                        <div class="listbox" id="listbox2">                            <form action="?" method="post" name="">                                <fieldset>                                    <legend>안건선택</legend>                                    <ul>                                        </ul>                                    <div class="btnarea"> <a href="#n" onclick="setAngunView();" class="abtn_select">안건보기</a> <a href="#n" onclick="setAngunReset();" class="abtn_deselect">선택취소</a> </div>                                </fieldset>                            </form>                        </div>                    </div>                    <!--// 안건 -->                     <!-- 부록 -->                    <div class="supplement">                        <h3><a href="#" id="h3_btn3">부록</a></h3>                        <div class="listbox" id="listbox3">                            <ul>                                </ul>                        </div>                    </div>                    <!--// 부록 -->                                     <!-- 관련회의록 -->                <div class="supplement">                    <h3><a href="#" id="h3_btn4">관련회의록</a></h3>                    <div class="listbox" id="listbox4">                        <ul>                            <li><span class="item"><a href="/cms/mntsViewer.do?mntsId=6429">제96회 개회식 본회의(2025.02.04 화요일)</a></span> </li>                                <li><span class="item"><a href="/cms/mntsViewer.do?mntsId=6432">제96회 제1차 본회의(2025.02.04 화요일)</a></span> </li>                                <li><span class="item"><a href="/cms/mntsViewer.do?mntsId=6449">제96회 제2차 본회의(2025.02.14 금요일)</a></span> </li>                                </ul>                    </div>                </div>                <!--// 관련회의록 -->                                    </div>                <p class="skip"><a href="#con_top">맨위로 이동</a></p>                <hr />            </div>        </div>    </div>    <!--// 사이드바 -->     <!--// minutesLeft -->     <!-- minutesContent -->    <div id="minutesContent" name="minutesContent"> <a name="goTopArea"></a>        <div id="minutesContentArea">            <h2>본문</h2>            <div name="skip-content" id="skip-content">                <div id="content">                     <!-- 회의록내용 -->                    <div class='agnd_h'>
+<p>제96회 세종특별자치시의회(임시회)</p>
+<div class='mnts_nm1'><div class='mnts_nm2'>본회의회의록 </div><div class='mnts_nm3'>개회식</div></div>
+<p class='align_right'>세종특별자치시의회사무처</p>
+<p><hr /></p>
+<p>일시 : 2025년2월4일(화) 10시00분 개식</p>
+<p><hr /></p>
+<p class='spc1'>  제96회 세종특별자치시의회(임시회) 개회식순</p>
+<p>1. 개            식</p>
+<p>1. 국기에 대한 경례</p>
+<p>1. 애 국 가 제 창</p>
+<p>1. 순국선열과 호국영령에 대한 묵념</p>
+<p>1. 개     회     사</p>
+<p>1. 폐            식</p>
+<p>(사회 : 의정담당관 진정옥)</p>
+<p><hr /></p>
+</div>
+<div class='agnd_0'>
+<p class='align_right'>(10시04분 개식)</p>
+<div class='spkr0016'>
+<p><span class='spkrbld'>○의정담당관 진정옥</span> 지금부터 제96회 세종특별자치시의회 임시회 개회식을 시작하겠습니다.</p>
+<p class='spc1'>  먼저 국민의례가 있겠습니다.</p>
+<p class='spc1'>  모두 자리에서 일어나 단상에 있는 국기를 향해 주시기 바랍니다.</p>
+<p class='spc3'>      (일동 기립)</p>
+<p class='spc3'>      (국기에 대하여 경례)</p>
+<p class='spc1'>  다음은 애국가 제창이 있겠습니다.</p>
+<p class='spc1'>  애국가는 반주에 맞춰 1절만 제창하시겠습니다.</p>
+<p class='spc3'>      (애국가 제창)</p>
+<p class='spc1'>  이어서 순국선열과 호국영령에 대한 묵념을 올리겠습니다.</p>
+<p class='spc3'>      (일동 묵념)</p>
+<p class='spc1'>  모두 자리에 앉아 주시기 바랍니다.</p>
+<p class='spc3'>      (일동 착석)</p>
+<p class='spc1'>  다음은 임채성 의장님의 개회사가 있겠습니다.</p>
+</div>
+<div class='spkrMBR000044'>
+<p><span class='spkrbld'>○의장 <a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000044' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>임채성</a></span> 존경하는 세종시민 여러분!</p>
+<p class='spc1'>  동료 의원님 여러분!</p>
+<p class='spc1'>  그리고 최민호 시장님과 최교진 교육감님을 비롯한 관계 공무원 여러분!</p>
+<p class='spc1'>  안녕하십니까, 세종특별자치시의회 의장 임채성입니다.</p>
+<p class='spc1'>  희망과 기대보다는 무거운 마음으로 시작한 2025년이 어느덧 한 달이 지났습니다.</p>
+<p class='spc1'>  지난 한 달 동안도 기쁘고 즐거운 일보다는 대통령 구속, 법원 폭동 등 시민의 마음을 무겁게 하는 소식이 많았습니다.</p>
+<p class='spc1'>  설 연휴 동안 시민들에게서 들은 목소리 역시 마찬가지였습니다.</p>
+<p class='spc1'>  지난해 비상계엄 등으로 연말 특수가 사라지고 차갑게 얼어붙은 소비 심리가 계속 이어지면서 경제 상황이 어렵다는 걱정 섞인 말씀을 많이 들었습니다.</p>
+<p class='spc1'>  더불어 정치적 불확실성으로 인해 많은 분들이 불안과 혼란을 느끼며 이러한 상황이 조속히 종식되어 일상으로 돌아가길 바라는 목소리가 높았습니다.</p>
+<p class='spc1'>  우리는 언제나 시민의 힘을 바탕으로 어려움을 극복해 왔습니다.</p>
+<p class='spc1'>  하지만 그 과정에서 공직자 여러분의 역할과 노력이 얼마나 중요한지도 잘 알고 있습니다.</p>
+<p class='spc1'>  시민들이 하루빨리 평온한 삶을 되찾을 수 있도록 세종시의 모든 공직자께서는 자신의 자리에서 최선을 다해 주시길 당부드립니다.</p>
+<p class='spc1'>  지난해 행정수도로 나아가기 위한 의미 있는 발걸음이 있었습니다.</p>
+<p class='spc1'>  올해도 그 발걸음을 이어 가면서 시민들에게 구체적인 성과를 보여 드리는 한 해가 되기를 바랍니다.</p>
+<p class='spc1'>  지난 연말 우리 시가 문화체육관광부로부터 대한민국 문화도시로 최종 지정되는 큰 성과를 이루었습니다.</p>
+<p class='spc1'>  이를 위해 애써 주신 모든 관계자 여러분께 진심으로 감사드립니다.</p>
+<p class='spc1'>  앞으로 문화도시 사업이 행정수도 완성과 더불어 한글문화수도로 발돋움해 나가는 원동력이 되길 바라며 시민의 삶에 풍요로움을 더해 줄 수 있도록 더욱 힘써 주시길 바랍니다.</p>
+<p class='spc1'>  교육청도 2025학년도 대학 입시에서 개청 이후 가장 큰 성과를 거두며 한 명, 한 명의 아이들을 특별하게 키우기 위한 노력의 결실을 보였습니다.</p>
+<p class='spc1'>  대학 입시 결과가 교육의 최종 성과는 아니지만 우리 아이들이 자신의 꿈을 향해 한 걸음 더  나아갔다는 의미가 있다고 생각합니다.</p>
+<p class='spc1'>  올해도 세종교육 공동체가 한마음으로 협력하여 아이들이 생각하는 사람, 참여하는 시민으로 성장할 수 있도록 힘써 주시길 당부드립니다.</p>
+<p class='spc1'>  우리 의회 역시 세종시와 시민을 위한 일에 집행부와 함께 힘을 모으겠습니다.</p>
+<p class='spc1'>  함께하고 도울 일이 있다면 언제든 발 벗고 나서겠습니다.</p>
+<p class='spc1'>  조례와 예산 등 의회가 할 수 있는 일들을 통해 적극 지원하겠습니다.</p>
+<p class='spc1'>  아울러 ‘집행부에 대한 견제와 감시’라는 의회의 본분 역시 충실히 수행하겠습니다.</p>
+<p class='spc1'>  올해 신년 화두를 노적성해(露積成海)로 말씀드렸습니다.</p>
+<p class='spc1'>  우리 각자의 힘과 노력은 어쩌면 작고 보잘것없게 느껴질 수 있습니다.</p>
+<p class='spc1'>  하지만 그 작은 노력들이 하나로 모이고 서로 조화를 이룬다면 더 큰 변화와 성과를 만들어 낼 수 있을 것입니다.</p>
+<p class='spc1'>  서로 격려하고 협력하는 한 해를 만들어 갔으면 합니다.</p>
+<p class='spc1'>  존경하는 의원님 여러분!</p>
+<p class='spc1'>  이번 회기는 올해 첫 임시회인 만큼 집행부로부터 주요 업무를 보고받고 한 해 동안 추진할 업무를 살펴보고 나아갈 방향을 정하는 중요한 자리입니다.</p>
+<p class='spc1'>  올해 성과를 만들기 위한 첫걸음으로 집행부의 주요 업무 계획을 꼼꼼히 살펴봐 주시고 합리적이고 좋은 의견을 더해 주시길 바랍니다.</p>
+<p class='spc1'>  끝으로 어제는 봄의 길목에 들어서는 입춘이었습니다.</p>
+<p class='spc1'>  다가오는 봄의 따스한 기운처럼 정의로운 결과가 하루빨리 나와 얼음처럼 차갑게 얼어붙은 시국과 시민들의 삶을 녹여 주길 간절히 바랍니다.</p>
+<p class='spc1'>  감사합니다.</p>
+</div>
+<div class='spkr0016'>
+<p><span class='spkrbld'>○의정담당관 진정옥</span> 이상으로 제96회 임시회 개회식을 모두 마치겠습니다.</p>
+<p class='spc1'>  바로 이어서 제1차 본회의가 개의되겠습니다.</p>
+<p class='align_right'>(10시12분 폐식)</p>
+<p><hr /></p>
+</div>
+</div>
+<div class='agnd_e'>
+<table class='attncnclmem'>
+<tr><td colspan='2' class='bld'>○참석의원(20인)</td></tr>
+<tr><td></td><td class='align_attn'><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000044' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>임채성</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000079' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>김효숙</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000065' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>김동빈</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000077' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>김영현</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000076' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>김현미</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000074' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>김재형</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000066' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>윤지성</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000073' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>이현정</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000064' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>김광운</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000063' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>김충식</a></span></td></tr>
+<tr><td></td><td class='align_attn'><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000067' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>김학서</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000078' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>김현옥</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000080' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>박란희</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000043' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>상병헌</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000068' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>안신일</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000081' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>여미전</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000075' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>유인호</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000058' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>이순열</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000069' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>최원석</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000083' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>홍나영</a></span></td></tr>
+</table>
+</div><!--// 회의록내용 -->                 </div>            </div>            <p class="skip"><a href="#con_top">맨위로 이동</a></p>        </div>        <!-- 페이지위로 -->        <div class="pageTopBtn"><a href="#content" title="페이지위로 이동"><img src="/images/egovframework/com/scc/mnts/btn_top.png" alt="페이지위로" /></a></div>        <!--// 페이지위로 -->     </div>    <!--// minutesContent --> </div>

@@ -1,0 +1,717 @@
+<form name="dfrm">    <input type="hidden" name="mntsId" id="mntsId" value="6432" />    <input type="hidden" name="mntsGnrtn" id="mntsGnrtn" value="4" /></form><h2><a name="con_top" id="con_top">바로가기</a></h2><ul class="skipUl">    <li class="li1"><a href="#skip-content">본문으로 바로가기</a></li>    <li class="li2"><a href="#skip-functionMenu">기능메뉴 메뉴 바로가기</a></li>    <li class="li3"><a href="#skip-settingMenu">설정메뉴 메뉴 바로가기</a></li></ul><hr /><div id="minutesViewer">     <!-- minutesTop -->    <div id="minutesTop">        <div class="title">            <h1><img src="/images/egovframework/com/scc/mnts/councilmark.png" alt="세종특별자치시의회" /></h1>        </div>        <h3>제96회 제1차 본회의(2025.02.04 화요일)</h3>        <h2>기능메뉴</h2>        <div name="skip-functionMenu" id="skip-functionMenu">            <div id="topFunction">                <div id="topFunctionArea">                    <div class="sidebar_control"> <a href="#" onclick="openNav2()"><img src="/images/egovframework/com/scc/mnts/sidebar_right.gif" alt="사이드 ON" /></a> </div>                    <div class="minutessearch">                        <form name="searchfrm" method="post" onsubmit="return getKeywordFormChk();" action="/cms/mntsKeywordViewer.do?#pos1">                            <fieldset>                                <legend>회의록검색</legend>                                <input type="hidden" name="mntsId" id="mntsId2" value="6432" />                                <label for="var07" class="skiplabel">회의록검색</label>                                <input type="text" name="var07" id="var07" class="text_minutesSearch"  />                                <input type="submit" value="검색" class="submit_searchBtn" />                            </fieldset>                        </form>                    </div>                    <div class="sidemenu">                        <ul>                            <li>                                <a href="/cms/CmsHwpDownload.do?id=6432" target="_blank" title="원문 파일을 다운받습니다." class="filedown1">원본</a> </li>                            <li><a href="/html/mntsPrint.html" onclick="window.open(this.href, 'printPage', 'width=980,height=600,top=100,left=100,scrollbars=yes,resizable=no'); return false;" title="프린터 페이지, 새창으로 이동"><img src="/images/egovframework/com/scc/mnts/topbtn_print.png" alt="프린터" /></a></li>                        </ul>                    </div>                    <div class="fontsetting">                        <ul>                            <li><a href="#" onclick="fontToggle(2);" title="폰트를 크게 합니다."><img src="/images/egovframework/com/scc/mnts/topbtn_fontPlus.png" alt="크게" /></a></li>                            <li><a href="#" onclick="sDefault();" title="폰트를 원래 크기로 합니다."><img src="/images/egovframework/com/scc/mnts/topbtn_fontNormal.png" alt="보통" /></a></li>                            <li><a href="#" onclick="fontToggle(-2);" title="폰트를 작게 합니다."><img src="/images/egovframework/com/scc/mnts/topbtn_fontMinus.png" alt="작게" /></a></li>                        </ul>                    </div>                    <div class="close"> <a href="#;" title="창을 닫습니다." onclick="window.close();return false;"><img src="/images/egovframework/com/scc/mnts/topbtn_close.png"  alt="닫기" /></a> </div>                </div>            </div>        </div>        <p class="skip"><a href="#con_top">맨위로 이동</a></p>        <hr />    </div>    <!--// minutesTop -->     <!-- minutesLeft -->     <!-- 사이드바 -->    <div id="mySidenav2" class="sidenav">        <div class="sidenav_top">            <h1><img src="/images/egovframework/com/scc/mnts/councilmark.png" alt="세종특별자치시의회" /></h1>            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> </div>        <div id="minutesLeft">            <div id="minutesLeftArea">                <h2>설정메뉴</h2>                <div name="skip-settingMenu" id="skip-settingMenu">                     <!-- 발언자 -->                    <div class="speaker">                        <h3><a href="#" id="h3_btn1">발언자</a></h3>                        <div class="listbox" id="listbox1" style="display:none" >                            <form method="post" name="speakerfrm" id="speakerfrm">                                <fieldset>                                    <legend>발언자 선택</legend>                                    <ul>                                        <li>                                                    <input type="checkbox" name="SPKRMBR" id="SPKRMBR1" value="spkrMBR000044" class="checkbox_normal" />                                                        <label for="SPKRMBR1">의장 임채성</label>                                                </li><li>                                                    <input type="checkbox" name="SPKRMBR" id="SPKRMBR2" value="spkr0030" class="checkbox_normal" />                                                        <label for="SPKRMBR2">시장 최민호</label>                                                </li><li>                                                    <input type="checkbox" name="SPKRMBR" id="SPKRMBR3" value="spkr0045" class="checkbox_normal" />                                                        <label for="SPKRMBR3">의사입법담당관 김온회</label>                                                </li><li>                                                    <input type="checkbox" name="SPKRMBR" id="SPKRMBR4" value="spkrMBR000077" class="checkbox_normal" />                                                        <label for="SPKRMBR4">김영현 의원</label>                                                </li><li>                                                    <input type="checkbox" name="SPKRMBR" id="SPKRMBR5" value="spkrMBR000076" class="checkbox_normal" />                                                        <label for="SPKRMBR5">김현미 의원</label>                                                </li><li>                                                    <input type="checkbox" name="SPKRMBR" id="SPKRMBR6" value="spkrMBR000079" class="checkbox_normal" />                                                        <label for="SPKRMBR6">김효숙 의원</label>                                                </li><li>                                                    <input type="checkbox" name="SPKRMBR" id="SPKRMBR7" value="spkrMBR000075" class="checkbox_normal" />                                                        <label for="SPKRMBR7">유인호 의원</label>                                                </li><li>                                                    <input type="checkbox" name="SPKRMBR" id="SPKRMBR8" value="spkrMBR000078" class="checkbox_normal" />                                                        <label for="SPKRMBR8">김현옥 의원</label>                                                </li><li>                                                    <input type="checkbox" name="SPKRMBR" id="SPKRMBR9" value="spkrMBR000083" class="checkbox_normal" />                                                        <label for="SPKRMBR9">홍나영 의원</label>                                                </li><li>                                                    <input type="checkbox" name="SPKRMBR" id="SPKRMBR10" value="spkrMBR000076" class="checkbox_normal" />                                                        <label for="SPKRMBR10">행정복지위원장 김현미</label>                                                </li><li>                                                    <input type="checkbox" name="SPKRMBR" id="SPKRMBR11" value="spkrMBR000058" class="checkbox_normal" />                                                        <label for="SPKRMBR11">이순열 의원</label>                                                </li><li>                                                    <input type="checkbox" name="SPKRMBR" id="SPKRMBR12" value="spkr0359" class="checkbox_normal" />                                                        <label for="SPKRMBR12">기획조정실장 이용일</label>                                                </li><li>                                                    <input type="checkbox" name="SPKRMBR" id="SPKRMBR13" value="spkr0450" class="checkbox_normal" />                                                        <label for="SPKRMBR13">교육감 최교진</label>                                                </li><li>                                                    <input type="checkbox" name="SPKRMBR" id="SPKRMBR14" value="spkr0494" class="checkbox_normal" />                                                        <label for="SPKRMBR14">교육국장 신명희</label>                                                </li></ul>                                    <div class="btnarea"> <a href="#;" onclick="setSpeakerView();" class="abtn_select">발언보기</a> <a href="#;" onclick="setSpeakerReset();" class="abtn_deselect">선택취소</a> </div>                                </fieldset>                            </form>                        </div>                    </div>                    <!--// 발언자 -->                     <!-- 안건 -->                    <div class="agenda">                        <h3><a href="#" id="h3_btn2">안건</a></h3>                        <div class="listbox" id="listbox2">                            <form action="?" method="post" name="">                                <fieldset>                                    <legend>안건선택</legend>                                    <ul>                                        <li> <span class="checkboxarea">                                                    <label for="agnd1" class="skiplabel">  o 보고사항(의사입법담당관 김온회)</label>                                                    <input type="checkbox" name="agnd" id="agnd1" value="agnd_1" class="checkbox_normal" />                                                    </span> <span class="item"><a href="#agnd_1">  o 보고사항(의사입법담당관 김온회)</a></span> </li>                                                <li> <span class="checkboxarea">                                                    <label for="agnd2" class="skiplabel">  o 5분 자유발언(김영현·김현미·김효숙·유인호·김현옥·홍나영 의원)</label>                                                    <input type="checkbox" name="agnd" id="agnd2" value="agnd_2" class="checkbox_normal" />                                                    </span> <span class="item"><a href="#agnd_2">  o 5분 자유발언(김영현·김현미·김효숙·유인호·김현옥·홍나영 의원)</a></span> </li>                                                <li> <span class="checkboxarea">                                                    <label for="agnd3" class="skiplabel">1. 제96회 세종특별자치시의회 임시회 회기 결정의 건(의장 제의)(의안번호 4468)</label>                                                    <input type="checkbox" name="agnd" id="agnd3" value="agnd_3" class="checkbox_normal" />                                                    </span> <span class="item"><a href="#agnd_3">1. 제96회 세종특별자치시의회 임시회 회기 결정의 건(의장 제의)(의안번호 4468)</a></span> </li>                                                <li> <span class="checkboxarea">                                                    <label for="agnd4" class="skiplabel">2. 제96회 세종특별자치시의회 임시회 회의록 서명의원 선임의 건(의장 제의)(의안번호 4469)</label>                                                    <input type="checkbox" name="agnd" id="agnd4" value="agnd_4" class="checkbox_normal" />                                                    </span> <span class="item"><a href="#agnd_4">2. 제96회 세종특별자치시의회 임시회 회의록 서명의원 선임의 건(의장 제의)(의안번호 4469)</a></span> </li>                                                <li> <span class="checkboxarea">                                                    <label for="agnd5" class="skiplabel">3. 국가균형발전 및 행정수도 완성을 위한 공공기관 이전 촉구 결의안(이순열 의원 대표발의)(의안번호 4467)</label>                                                    <input type="checkbox" name="agnd" id="agnd5" value="agnd_5" class="checkbox_normal" />                                                    </span> <span class="item"><a href="#agnd_5">3. 국가균형발전 및 행정수도 완성을 위한 공공기관 이전 촉구 결의안(이순열 의원 대표발의)(의안번호 4467)</a></span> </li>                                                <li> <span class="checkboxarea">                                                    <label for="agnd6" class="skiplabel">4. 2025년도 세종특별자치시 주요업무계획 보고 청취의 건</label>                                                    <input type="checkbox" name="agnd" id="agnd6" value="agnd_6" class="checkbox_normal" />                                                    </span> <span class="item"><a href="#agnd_6">4. 2025년도 세종특별자치시 주요업무계획 보고 청취의 건</a></span> </li>                                                <li> <span class="checkboxarea">                                                    <label for="agnd7" class="skiplabel">5. 2025년도 세종특별자치시교육청 주요업무계획 보고 청취의 건</label>                                                    <input type="checkbox" name="agnd" id="agnd7" value="agnd_7" class="checkbox_normal" />                                                    </span> <span class="item"><a href="#agnd_7">5. 2025년도 세종특별자치시교육청 주요업무계획 보고 청취의 건</a></span> </li>                                                <li> <span class="checkboxarea">                                                    <label for="agnd8" class="skiplabel">6. 휴회의 건(의장 제의)</label>                                                    <input type="checkbox" name="agnd" id="agnd8" value="agnd_8" class="checkbox_normal" />                                                    </span> <span class="item"><a href="#agnd_8">6. 휴회의 건(의장 제의)</a></span> </li>                                                <li> <span class="checkboxarea">                                                    <label for="agnd9" class="skiplabel">  - 2025. 2. 5. ∼ 2. 13.(9일간)</label>                                                    <input type="checkbox" name="agnd" id="agnd9" value="agnd_9" class="checkbox_normal" />                                                    </span> <span class="item"><a href="#agnd_9">  - 2025. 2. 5. ∼ 2. 13.(9일간)</a></span> </li>                                                </ul>                                    <div class="btnarea"> <a href="#n" onclick="setAngunView();" class="abtn_select">안건보기</a> <a href="#n" onclick="setAngunReset();" class="abtn_deselect">선택취소</a> </div>                                </fieldset>                            </form>                        </div>                    </div>                    <!--// 안건 -->                     <!-- 부록 -->                    <div class="supplement">                        <h3><a href="#" id="h3_btn3">부록</a></h3>                        <div class="listbox" id="listbox3">                            <ul>                                <li><span class="icon"><img src="/images/egovframework/com/scc/utl/ext/hwp.gif" width="14px" alt="한글 파일" /></span><span class="supplement_subject"><a href="/cms/CmsApndxDownload.do?apndxSn=11645"><span class="appList" id="app">제96회 세종특별자치시의회 임시회 제1차 본회의 보고사항</span></a> <a href="/synap/htmlViewerAppendix.xdo?apndxSn=11645" target="_blank" title="첨부파일 미리보기페이지, 새창으로 이동" class="abtn_viewerPreview"><img src="/images/egovframework/com/scc/cms/patternBlue/abtn_preview.gif" alt="미리보기" /></a></span></li>                                    <li><span class="icon"><img src="/images/egovframework/com/scc/utl/ext/hwp.gif" width="14px" alt="한글 파일" /></span><span class="supplement_subject"><a href="/cms/CmsApndxDownload.do?apndxSn=11646"><span class="appList" id="app">제96회 세종특별자치시의회 임시회 회기 결정의 건</span></a> <a href="/synap/htmlViewerAppendix.xdo?apndxSn=11646" target="_blank" title="첨부파일 미리보기페이지, 새창으로 이동" class="abtn_viewerPreview"><img src="/images/egovframework/com/scc/cms/patternBlue/abtn_preview.gif" alt="미리보기" /></a></span></li>                                    <li><span class="icon"><img src="/images/egovframework/com/scc/utl/ext/hwp.gif" width="14px" alt="한글 파일" /></span><span class="supplement_subject"><a href="/cms/CmsApndxDownload.do?apndxSn=11647"><span class="appList" id="app">제96회 세종특별자치시의회 임시회 회의록 서명의원 선임의 건</span></a> <a href="/synap/htmlViewerAppendix.xdo?apndxSn=11647" target="_blank" title="첨부파일 미리보기페이지, 새창으로 이동" class="abtn_viewerPreview"><img src="/images/egovframework/com/scc/cms/patternBlue/abtn_preview.gif" alt="미리보기" /></a></span></li>                                    <li><span class="icon"><img src="/images/egovframework/com/scc/utl/ext/hwp.gif" width="14px" alt="한글 파일" /></span><span class="supplement_subject"><a href="/cms/CmsApndxDownload.do?apndxSn=11648"><span class="appList" id="app">국가균형발전 및 행정수도 완성을 위한 공공기관 이전 촉구 결의안</span></a> <a href="/synap/htmlViewerAppendix.xdo?apndxSn=11648" target="_blank" title="첨부파일 미리보기페이지, 새창으로 이동" class="abtn_viewerPreview"><img src="/images/egovframework/com/scc/cms/patternBlue/abtn_preview.gif" alt="미리보기" /></a></span></li>                                    </ul>                        </div>                    </div>                    <!--// 부록 -->                                     <!-- 관련회의록 -->                <div class="supplement">                    <h3><a href="#" id="h3_btn4">관련회의록</a></h3>                    <div class="listbox" id="listbox4">                        <ul>                            <li><span class="item"><a href="/cms/mntsViewer.do?mntsId=6429">제96회 개회식 본회의(2025.02.04 화요일)</a></span> </li>                                <li><span class="item"><a href="/cms/mntsViewer.do?mntsId=6432">제96회 제1차 본회의(2025.02.04 화요일)</a></span> </li>                                <li><span class="item"><a href="/cms/mntsViewer.do?mntsId=6449">제96회 제2차 본회의(2025.02.14 금요일)</a></span> </li>                                </ul>                    </div>                </div>                <!--// 관련회의록 -->                                    </div>                <p class="skip"><a href="#con_top">맨위로 이동</a></p>                <hr />            </div>        </div>    </div>    <!--// 사이드바 -->     <!--// minutesLeft -->     <!-- minutesContent -->    <div id="minutesContent" name="minutesContent"> <a name="goTopArea"></a>        <div id="minutesContentArea">            <h2>본문</h2>            <div name="skip-content" id="skip-content">                <div id="content">                     <!-- 회의록내용 -->                    <div class='agnd_h'>
+<p>제96회 세종특별자치시의회(임시회)</p>
+<div class='mnts_nm1'><div class='mnts_nm2'>본회의회의록 </div><div class='mnts_nm3'>제1호</div></div>
+<p class='align_right'>세종특별자치시의회사무처</p>
+<p><hr /></p>
+<p>일  시 : 2025년2월4일(화) 10시00분</p>
+<p><hr /></p>
+<p class='spc1'><span class='bld'>  의사일정</span></p>
+<p>1. 제96회 세종특별자치시의회 임시회 회기 결정의 건</p>
+<p>2. 제96회 세종특별자치시의회 임시회 회의록 서명의원 선임의 건</p>
+<p>3. 국가균형발전 및 행정수도 완성을 위한 공공기관 이전 촉구 결의안</p>
+<p>4. 2025년도 세종특별자치시 주요업무계획 보고 청취의 건</p>
+<p>5. 2025년도 세종특별자치시교육청 주요업무계획 보고 청취의 건</p>
+<p>6. 휴회의 건</p>
+<p><hr /></p>
+<p class='spc1'><span class='bld'>  상정된 안건</span></p>
+<p class='spc1'><a href='#agnd_1'>  o 보고사항(의사입법담당관 김온회)</a></p>
+<p class='spc1'><a href='#agnd_2'>  o 5분 자유발언(김영현·김현미·김효숙·유인호·김현옥·홍나영 의원)</a></p>
+<p><a href='#agnd_3'>1. 제96회 세종특별자치시의회 임시회 회기 결정의 건(의장 제의)(의안번호 4468)</a></p>
+<p><a href='#agnd_4'>2. 제96회 세종특별자치시의회 임시회 회의록 서명의원 선임의 건(의장 제의)(의안번호 4469)</a></p>
+<p><a href='#agnd_5'>3. 국가균형발전 및 행정수도 완성을 위한 공공기관 이전 촉구 결의안(이순열 의원 대표발의)(의안번호 4467)</a></p>
+<p><a href='#agnd_6'>4. 2025년도 세종특별자치시 주요업무계획 보고 청취의 건</a></p>
+<p><a href='#agnd_7'>5. 2025년도 세종특별자치시교육청 주요업무계획 보고 청취의 건</a></p>
+<p><a href='#agnd_8'>6. 휴회의 건(의장 제의)</a></p>
+<p class='spc1'><a href='#agnd_9'>  - 2025. 2. 5. ∼ 2. 13.(9일간)</a></p>
+<p><hr /></p>
+</div>
+<div class='agnd_0'>
+<p class='align_right'>(10시12분 개의)</p>
+<div class='spkrMBR000044'>
+<p><span class='spkrbld'>○의장 <a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000044' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>임채성</a></span> 의석을 정돈해 주시기 바랍니다.</p>
+<p class='spc1'>  성원이 되었으므로 제96회 세종특별자치시의회 임시회 제1차 본회의를 개의하겠습니다.</p>
+<p class='spc1'>  회의 진행에 앞서 인사 발령된 집행부 간부 공무원 소개가 있겠습니다.</p>
+<p class='spc1'>  최민호 시장님 나오셔서 소개해 주시기 바랍니다.</p>
+</div>
+<div class='spkr0030'>
+<p><span class='spkrbld'>○시장 최민호</span> 시장 최민호입니다.</p>
+<p class='spc1'>  인사 발령에 따라 변동된 신임 간부 공무원을 소개해 드리겠습니다.</p>
+<p class='spc1'>  고성진 시민안전실장입니다.</p>
+<p class='spc1'>  천흥빈 교통국장입니다.</p>
+<p class='spc1'>  박태원 소방본부장입니다.</p>
+<p class='spc3'>      (인사)</p>
+<p class='spc1'>  이상 소개를 마치겠습니다.</p>
+</div>
+<div class='spkrMBR000044'>
+<p><span class='spkrbld'>○의장 <a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000044' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>임채성</a></span> 시장님 수고하셨습니다.</p>
+<p class='spc1'>  다음은 오늘 회의에 불참하는 관계 공무원에 대해 말씀드리겠습니다.</p>
+<p class='spc1'>  우태제 교육원장은 가사 사정으로 불참한다는 공문이 제출되었습니다.</p>
+<p class='spc1'>  의원님 여러분, 양해하여 주시기 바랍니다.</p>
+<p class='spc1'>  다음은 의사입법담당관으로부터 의사보고가 있겠습니다.</p>
+<p class='spc1'>  김온회 의사입법담당관은 보고해 주시기 바랍니다.</p>
+<p><hr /></p>
+</div>
+</div>
+<div class='agnd_1'>
+<p class='spc1'><a name='agnd_1'></a><span class='bld'>  o 보고사항(의사입법담당관 김온회)</span></p>
+<div class='spkr0045'>
+<p><span class='spkrbld'>○의사입법담당관 김온회</span> 의사입법담당관 김온회입니다.</p>
+<p class='spc1'>  의사보고 드리겠습니다.</p>
+<p class='spc1'>  먼저 임시회 집회 경위입니다.</p>
+<p class='spc1'>  이번 임시회는 「지방자치법」 제54조에 따라 상병헌 의원 외 6인으로부터 집회요구서가 제출되어 1월 23일 공고를 거쳐 오늘 개회를 하게 되었습니다.</p>
+<p class='spc1'>  금번 임시회에 발의·제출된 안건 현황입니다.</p>
+<p class='spc1'>  임채성 의원 대표발의로 세종특별자치시의회 홍보대사 운영 조례안 등 조례안 57건과 이순열 의원 대표발의로 국가균형발전 및 행정수도 완성을 위한 공공기관 이전 촉구 결의안 등 총 58건이 의원발의 되었습니다.</p>
+<p class='spc1'>  다음은 집행부가 제출한 안건입니다.</p>
+<p class='spc1'>  시장으로부터 세종평생교육·정책연구원 설립 및 운영 조례안 등 29건, 교육감으로부터 세종특별자치시 시립학교 설치 조례 일부개정조례안 등 4건이 제출되었습니다.</p>
+<p class='spc1'>  접수된 안건 94건 중 92건은 위원회에 회부하였으며, 제96회 세종특별자치시의회 임시회 회기 결정의 건 등 2건은 본회의에 부의하였습니다.</p>
+<p class='spc1'>  기타 자세한 내용은 회의록에 게재하도록 하겠습니다.</p>
+<p class='spc1'>  이상 보고를 마치겠습니다.</p>
+<p class='spc3'>      (부록 참조)</p>
+</div>
+<div class='spkrMBR000044'>
+<p><span class='spkrbld'>○의장 <a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000044' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>임채성</a></span> 의사입법담당관님 수고하셨습니다.</p>
+<p><hr /></p>
+</div>
+</div>
+<div class='agnd_2'>
+<p class='spc1'><a name='agnd_2'></a><span class='bld'>  o 5분 자유발언(김영현·김현미·김효숙·유인호·김현옥·홍나영 의원)</span></p>
+<div class='spkrMBR000044'>
+<p><span class='spkrbld'>○의장 <a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000044' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>임채성</a></span> 다음은 「세종특별자치시의회 회의 규칙」 제42조에 따라 5분 자유발언을 듣도록 하겠습니다.</p>
+<p class='spc1'>  5분 자유발언은 김영현·김현미·김효숙·유인호·김현옥·홍나영 의원님, 이상 여섯 분이 신청하셨습니다.</p>
+<p class='spc1'>  발언 제한 시간 5분이 경과될 경우 마이크가 자동 차단되니 참고하여 주시기 바랍니다.</p>
+<p class='spc1'>  그럼 먼저 김영현 의원님 나오셔서 발언해 주시기 바랍니다.</p>
+</div>
+<div class='spkrMBR000077'>
+<p><span class='spkrbld'>○<a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000077' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>김영현</a> 의원</span> 존경하는 39만 세종시민 여러분!</p>
+<p class='spc1'>  임채성 의장님을 비롯한 선배·동료 의원님과 공무원 여러분!</p>
+<p class='spc1'>  안녕하십니까, 반곡·집현·합강동을 지역구로 두고 있는 더불어민주당 소속 김영현 의원입니다.</p>
+<p class='spc1'>  오늘 본 의원은 저출생 문제 해결과 난임 부부의 의료 선택권 보장을 위해 한방 난임 치료 지원의 필요성을 촉구하고자 이 자리에 섰습니다.</p>
+<p class='spc1'>  최근 저출산고령사회위원회가 발표한 2024년 3분기 전국 합계 출산율은 0.75명으로 2015년 1.24명 이후 매년 가파르게 감소되어 왔으며, 세종시 합계 출산율 또한 2015년 1.89명에서 2023년 0.97명으로 크게 하락한 것으로 나타났습니다.</p>
+<p class='spc1'>  이러한 현상은 출산을 하지 않으려는 사회 현상뿐만 아니라 혼인 연령기가 높아짐에 따라 아이를 낳으려 노력을 해도 임신을 반복적으로 실패하는 난임 부부가 급증하는 상황도 하나의 요인으로 작용하고 있습니다.</p>
+<p class='spc1'>  건강보험심사평가원 통계에 따르면 난임으로 병원을 찾는 부부가 한 해 14만 명이 넘어섰으며, 5년간 불임과 난임 시술 건수도 각각 4.7%, 16%가 증가했다고 발표했습니다.</p>
+<p class='spc1'>  이에 국회에서도 2024년 2월 「모자보건법」을 개정하여 난임 치료를 위한 시술비 지원에 「한의약 육성법」에 따른 한방 의료를 통하여 난임 치료 비용 지원이 포함될 수 있도록 다각적인 난임 지원의 법적 기반을 마련했습니다.</p>
+<p class='spc1'>  2009년 대구광역시를 시작으로 많은 지방자치단체에서 지역 한의사회와 협력하여 한방 난임 치료 사업을 양방 시술과 상호 보완적인 저출산 대책의 일환으로 시행해 오고 있습니다.</p>
+<p class='spc1'>  이렇듯 각 지역의 한방 난임 치료 사업 성과가 해를 거듭해 축적되면서 이를 더욱 체계적으로 추진하기 위해 현재 전국 54개 지방자치단체에서는 한방 난임 조례를 제정하여 사업을 추진하고 있습니다.</p>
+<p class='spc1'>  저출생과 난임 문제는 더 이상 개별 가정의 고통이 아니라 우리 사회 전체가 해결해야 할 국가적 과제입니다.</p>
+<p class='spc1'>  부부가 원하는 시기에 자녀 출산을 행복하게 할 수 있도록 다각적으로 지원하는 것이 저출산 극복의 출발점이라 생각합니다.</p>
+<p class='spc1'>  이런 상황에서 본 의원은 아이를 간절히 바라는 난임 부부들이 더 폭넓은 선택지와 지원을 받을 수 있도록 한방 난임 치료 지원 사업을 추진해 주실 것을 제안드립니다.</p>
+<p class='spc1'>  2020년 우리 시는 의회에서 발의한 한방 난임치료 지원에 관한 조례안에 대해 시술의 안전성 및 효과성, 예산의 중복 지원 등의 이유를 들어 재의 요구를 함으로써 조례가 부결된 바 있습니다.</p>
+<p class='spc1'>  난임 부부들은 누구보다 간절히 자녀를 갖길 원하며 굳은 의지를 보이고 있지만 그동안 시는 이들의 치료 선택권을 충분히 존중하지 못했습니다.</p>
+<p class='spc1'>  그러나 지금은 당시와 상황이 크게 달라졌습니다.</p>
+<p class='spc1'>  「모자보건법」에 따라 한방 난임 지원 사업이 법률에 근거한 사무임이 명확해졌으며 타 시도 사례를 참고하여 사업을 추진하기만 하면 되기 때문입니다.</p>
+<p class='spc1'>  경기도는 2019년 조례를 제정해 사업을 추진함으로써 난임 부부의 선택권을 다양화하고 양방 시술에 거부감이 있는 난임 부부들에게 한의약 난임 치료를 지원한 결과 치료 만족도가 89.8%로 매우 높게 나타났습니다.</p>
+<p class='spc1'>  또한 전라남도 지원 사업에 참여한 난임 부부를 대상으로 한 설문조사에서도 한방 난임 치료에 대한 만족도가 매우 높은 것으로 확인되었습니다.</p>
+<p class='spc1'>  참여자의 약 84%가 치료에 만족감을 표시했으며 79%는 한방 난임 치료를 차후에 다시 받을 의향이 있다고 응답했습니다.</p>
+<p class='spc1'>  이제는 더 이상 안 되는 이유를 찾기 위해 애쓰는 것이 아니라 현실을 직시하고 보다 체계적이고 적극적인 지원 정책을 마련해야 할 때입니다.</p>
+<p class='spc1'>  난임 부부의 의료 선택권 보장과 세종시만 해당되지 않는다는 지역 소외감 해결을 위해서라도 한방 난임 치료 지원 사업은 적극 시행되어야 할 것입니다.</p>
+<p class='spc1'>  앞으로는 수혜자인 시민의 입장에서 양방과 한방이 협업하여 관내 난임 치료의 효과를 극대화할 수 있도록 시가 적극적으로 지원 기준을 마련해 주시길 바라며 발언을 마치겠습니다.</p>
+<p class='spc1'>  경청해 주셔서 감사합니다.</p>
+</div>
+<div class='spkrMBR000044'>
+<p><span class='spkrbld'>○의장 <a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000044' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>임채성</a></span> 김영현 의원님 수고하셨습니다.</p>
+<p class='spc1'>  다음은 김현미 의원님 나오셔서 발언해 주시기 바랍니다.</p>
+</div>
+<div class='spkrMBR000076'>
+<p><span class='spkrbld'>○<a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000076' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>김현미</a> 의원</span> 존경하는 39만 세종시민 여러분!</p>
+<p class='spc1'>  소담동을 지역구로 두고 있는 더불어민주당 소속 김현미 의원입니다.</p>
+<p class='spc1'>  본 의원은 5분 발언을 통해 국민 사망 원인 1위인 암에 대해서 개인의 불행으로만 인식하지 말고 사회적 과제로 인식해서 암환자와 암생존자의 사회 복귀, 임신, 자녀 돌봄 지원 등 지역사회 기반 세종형 암 사후 돌봄 정책을 제안하고자 이 자리에 섰습니다.</p>
+<p class='spc1'>  2023년 기준 보건복지부와 중앙암등록본부 통계에 의하면 암 유병자는 258만 8079명으로 국민 20명당 1명이 암 유병자이며 이는 전체 인구 대비 5%에 해당됩니다.</p>
+<p class='spc1'>  세종시도 2023년 통계에 의하면 표준인구 10만 명당 75.8명 이상이 암 발병으로 인해 사망하여 사망의 주요 원인이 되고 있습니다.</p>
+<p class='spc1'>  특히 65세 이상에서는 인구 7명당 1명이 암 유병자라는 통계가 있으나 다행인 것은 국가 차원의 암 예방 및 검진 사업으로 최근 5년간 진단받은 암환자의 5년 상대 생존율은 72.9%로 2001년부터 2005년에 진단받은 암환자의 상대 생존율인 52.4%와 비교할 때 18.7% 높아졌습니다.</p>
+<p class='spc1'>  「암관리법」에서는 암 진단 후 완치 목적의 주요 치료를 마친 암환자를 암생존자라고 정의하고 있습니다.</p>
+<p class='spc1'>  「암관리법」 제46조에서는 암생존자에 대한 원활한 사회 복귀 필요성을 인식하고 국가와 지방자치단체가 암생존자 통합지지사업에 드는 비용의 전부 또는 일부를 지원할 수 있도록 규정하였습니다.</p>
+<p class='spc1'>  암을 극복하고 완치 판정을 받은 사실은 매우 기쁜 일이 틀림없으나 암을 겪은 개인의 삶은 결코 이전과 같을 수 없다고 생각합니다.</p>
+<p class='spc1'>  오로지 치료에만 집중한 시간이 끝나고 다시 일상으로 돌아가려 할 때 이들은 경력 단절과 생계 불안, 주위의 불편한 시선과 맞닥뜨리게 됩니다.</p>
+<p class='spc1'>  많은 질병 중 특히 암은 개인의 불행을 넘어 사회적으로 관리하고 극복해야 할 과제가 틀림없습니다.</p>
+<p class='spc1'>  본 의원은 암생존자들의 건강 회복과 사회 복귀를 위한 세종형 암 사후 돌봄 정책을 마련할 것을 다음과 같이 제안하고자 합니다.</p>
+<p class='spc1'>  첫째, 세종시 암생존자들이 권역별로 설치된 암생존자통합지지센터를 이용할 수 있도록 방안을 마련하고 관련 사업을 추진해 주시기 바랍니다.</p>
+<p class='spc1'>  국가에서는 암생존자의 건강 증진과 사회 복귀 지원을 위해 권역별로 암생존자통합지지센터를 개소해서 운동 지도, 심리 상담, 가족 관계 고민 상담 등 암생존자들을 지원하여 원활한 일상 회복을 돕기 위해 노력하고 있는데 전국의 17개 광역시도 중 우리 세종시만 유일하게 센터가 없습니다.</p>
+<p class='spc1'>  2025년 세종시 사업을 보면 암환자를 위한 검진, 저소득층 치료비 지원은 있으나 암생존자를 위한 사업은 전무한 실정입니다.</p>
+<p class='spc1'>  세종시는 100% 민자 유치로 5000억 원이 넘는 비용을 들여 2028년 개원을 목표로 중입자가속기 암치료센터 설치를 추진하고 있지만 본 의원은 지금 당장 하루가 급한 암생존자의 사회 복귀를 돕기 위한 정책이 필요하다고 생각합니다.</p>
+<p class='spc1'>  세종시는 중앙부처와 협의를 통해 광주광역시와 전라남도 사례처럼 세종시민들이 대전권역 암생존자통합지지센터를 이용할 수 있도록 해 주시기 바랍니다.</p>
+<p class='spc1'>  두 번째로 「모자보건법」에 따라 암환자 가임력 보전을 위한 조례 제정과 암생존자 보육 지원을 위해 국공립어린이집에 우선 입소할 수 있는 정책을 마련해 주실 것을 제안합니다.</p>
+<p class='spc1'>  암 발병 전후 항암 치료 등으로 임신이 어려운 사정과 출산 후 암 발병으로 영유아 보육 지원이 절실한 분들이 암생존자 가정이기 때문입니다.</p>
+<p class='spc1'>  마지막으로 의료와 지역사회 기반인 보건, 복지, 스포츠 등 공공정책을 연계해서 암생존자를 지원하는 정책을 마련할 것을 제안합니다.</p>
+<p class='spc1'>  암 치료 이후 경력 단절이나 경제적 어려움을 걱정하는 암생존자 비율이 70%가 넘는다는 현실을 반영해서 영유아 보육 지원, 청년 암생존자 취업 지원, 경력 단절 지원, 노인 암생존자 건강 관리 등 조례 제·개정 등을 통해 연령별로 필요한 지원이 연계될 수 있도록 해야 합니다.</p>
+<p class='spc1'>  세종시는 젊은 도시라는 특성상 암 발생률이 타 지역보다는 낮게 나타나고 있습니다.</p>
+<p class='spc1'>  그러나 연령별 사망률 추이를 보면 10대부터 30대까지는 암 사망률 차이가 적지만 40대부터는 평균 3배 이상 증가하는 경향을 보여 안심할······</p>
+<p class='spc3'>      (발언시간 초과로 마이크 중단)</p>
+<p class='dotline'></p>
+<p class='spc3'>      (마이크 중단 이후 계속 발언한 부분)</p>
+<p>처지가 아닙니다.</p>
+<p class='spc1'>  암 치료라는 무섭고 지난한 과정을 극복한 암생존자가 또 다른 고통 없이 사회 복귀를 할 수 있도록 의료와 더불어 문화·체육, 경제, 보건 등 세종시 지역사회 모든 분야를 연계하여 암생존자 지원 정책을 추진해 주시기를 바라면서 5분 자유발언을 마치도록 하겠습니다.</p>
+<p class='spc1'>  경청해 주셔서 감사합니다.</p>
+<p class='dotline'></p>
+</div>
+<div class='spkrMBR000044'>
+<p><span class='spkrbld'>○의장 <a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000044' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>임채성</a></span> 김현미 의원님 수고하셨습니다.</p>
+<p class='spc1'>  다음은 김효숙 의원님 나오셔서 발언해 주시기 바랍니다.</p>
+</div>
+<div class='spkrMBR000079'>
+<p><span class='spkrbld'>○<a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000079' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>김효숙</a> 의원</span> 존경하는 39만 세종시민 여러분!</p>
+<p class='spc1'>  안녕하십니까, 나성동을 지역구로 두고 있는 더불어민주당 김효숙 의원입니다.</p>
+<p class='spc1'>  본 의원은 오늘 2025년을 세종시 상가 공실 문제 해결의 원년으로 삼아야 한다는 말씀을 드리고자 합니다.</p>
+<p class='spc1'>  출범 13년 차를 맞은 세종시는 인구 39만의 대한민국 행정수도로 성장했지만 상가 공실률 전국 1위라는 고질적인 문제를 해결하지 못하고 있습니다.</p>
+<p class='spc1'>  시와 관계기관들이 다양한 대책을 제시했으나 실효적인 해법을 찾지 못한 상황에서 대내외 경기 침체와 불확실성 증가, 인구 정체 등으로 대책 마련이 더욱 시급해졌고 본 의원도 기회가 있을 때마다 여러 해법을 제안했습니다.</p>
+<p class='spc1'>  하지만 올해 세종시 주요 업무 계획을 보면 대책은 찾아볼 수 없고 상가공실박람회의 성과 홍보만 언급되어 있어 유감입니다.</p>
+<p class='spc1'>  실제로 상가공실박람회의 계약 성과는 6건에 불과하고 이후 별다른 후속 조치는 물론 계획조차 나온 게 없습니다.</p>
+<p class='spc1'>  엠브릿지, 어반아트리움, 세종페스타 등 대규모 공실 해결을 위한 노력도 여전히 답보 상태입니다.</p>
+<p class='spc1'>  이에 본 의원은 시에 올해만큼은 실효성 있는 정책 설계와 적극적 예산 투입으로 직접적인 상가 공실 해소에 총력을 다할 것을 재차 강력히 요구하며 다음 세 가지 제언을 드리고자 합니다.</p>
+<p class='spc1'>  첫째, 대형 공실 상가를 활용해 세종형 창업지구를 조성하기 바랍니다.</p>
+<p class='spc1'>  세종시에서는 매년 1800개 이상의 기술 기반 업종이 창업될 정도로 창업 열기가 뜨겁지만 창업키움센터는 단 15개 기업만 수용할 수 있어 공간이 턱없이 부족합니다.</p>
+<p class='spc1'>  제2의 창업키움센터 조성이 필요한 이유입니다.</p>
+<p class='spc1'>  신규 건축은 예산 등의 제약이 크지만 기존 대형 상가 공실을 임차해 창업자에게 저렴한 공간을 제공하는 방안은 현실적 대안이 될 수 있습니다.</p>
+<p class='spc1'>  대형 상가 공실을 창업지구로 조성하면 공실 문제 해결은 물론 유동인구 증가와 상권 활성화로 젊은 도시 이미지로만 국한됐던 세종시를 창업하기 좋은 도시로 만들어 인구 유입 및 정주 여건 개선에도 크게 기여할 것입니다.</p>
+<p class='spc1'>  아울러 창업 기업들이 모여 벤처기업 상권을 형성하고 세종시의 미래 먹거리를 책임질 앵커기업과 유니콘기업이 탄생할 수 있는 환경도 조성될 것입니다.</p>
+<p class='spc1'>  둘째, 공실 상가를 소극장을 포함한 공연·전시 공간으로 활용할 수 있도록 지원해야 합니다.</p>
+<p class='spc1'>  현재 세종시에는 몇 달에서 몇 년 동안 같은 작품을 공연하는 오픈 런(open run) 소극장이 전무합니다.</p>
+<p class='spc1'>  예술의전당은 대규모 공연 시설이고 문화예술회관, 비오케이아트센터, 누리락이 있다지만 소규모 상설 오픈 런 공연장은 전무합니다.</p>
+<p class='spc1'>  인근 청주시만 봐도 문화·예술공간 지원 사업을 통해 작년에만 5개의 소극장을 새롭게 조성했습니다.</p>
+<p class='spc1'>  우리도 공실 상가를 활용해 공연 및 전시 공간을 지원하는 정책을 적극 추진해야 합니다.</p>
+<p class='spc1'>  공연의 다양성을 제공하는 소극장이 마련되면 시민들은 서울이나 대전, 청주로 가지 않고도 지역에서 수준 높은 공연을 즐길 수 있고 타 지역 주민들도 세종을 찾아오게 될 것입니다.</p>
+<p class='spc1'>  이를 통해 공실 해소는 물론 상권 활성화와 문화·예술 진흥에도 기여할 것입니다.</p>
+<p class='spc1'>  셋째, 전담 TF 조직 구성이 필요합니다.</p>
+<p class='spc1'>  현재 상가 공실 업무는 소상공인과 상권육성팀 단 5명의 직원이 전담하고 있는데 이 인력과 조직으로는 실질적인 진전을 기대하기 어렵습니다.</p>
+<p class='spc1'>  상가공실박람회가 취지는 좋았지만 예산 편성과 정책 수립에서 후속 조치로 이어지지 못하고 9800만 원짜리 일회성 행사로 끝난 것도 현 조직의 한계를 여실히 보여 주는 사례입니다.</p>
+<p class='spc1'>  상가 공실 문제는 복합적 사안으로 실질적인 성과를 내기 위해서는 관계 부서 간 협업을 통한 종합적 대책 수립이 필수적으로 그에 걸맞은 전담 조직과 추진 체계를 마련해야 합니다.</p>
+<p class='spc1'>  세종시는 조직 역량을 총결집해 경제부시장이나 적절한 실·국장이 리더십을 발휘하고 관련 부서가 모두 참여하는 TF팀을 구성하는 방안을 적극 검토해야 합니다.</p>
+<p class='spc1'>  본 의원도 의회 차원에서 전력을 다할 것입니다.</p>
+<p class='spc1'>  그 첫걸음으로 세종시, 행복청, LH를 비롯한 관계 기관과 상인, 창업자, 상가 소유자, 전문가 등이 참여하는 간담회와 상가 공실 문제 해법 마련을 위한 연구모임을 추진할 계획입니다.</p>
+<p class='spc1'>  지금이 바로 골든타임입니다.</p>
+<p class='spc1'>  세종시는 2025년을 상가 공실 문제 해결의 원년으로 삼아 정책 역량을 집중하고 반드시 성과를 거둬 주시길 당부드리면서 5분 자유발언을 마치겠습니다.</p>
+<p class='spc1'>  끝까지 경청해 주셔서 감사합니다.</p>
+</div>
+<div class='spkrMBR000044'>
+<p><span class='spkrbld'>○의장 <a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000044' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>임채성</a></span> 김효숙 의원님 수고하셨습니다.</p>
+<p class='spc1'>  다음은 유인호 의원님 나오셔서 발언해 주시기 바랍니다.</p>
+</div>
+<div class='spkrMBR000075'>
+<p><span class='spkrbld'>○<a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000075' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>유인호</a> 의원</span> 존경하는 39만 세종시민 여러분!</p>
+<p class='spc1'>  안녕하십니까, 보람동을 지역구로 두고 있는 더불어민주당 소속 유인호 의원입니다.</p>
+<p class='spc1'>  오늘 저는 공동주택 비율이 높은 우리 시의 특성을 반영하여 시민의 안전한 보행권을 보장하고 공동주택 시설물에 대한 하자 보수 요구 등 주민의 정당한 권리가 침해받지 않도록 우리 시의 적극행정을 촉구하고자 이 자리에 섰습니다.</p>
+<p class='spc1'>  (자료 화면을 보며)지금 보이는 사진은 보람동에 위치한 한 상가 건물의 외관을 시간 순서대로 나열한 것입니다.</p>
+<p class='spc1'>  2017년도에는 상가 건물과 보도블록 사이에 조금의 틈도 발견되지 않다가 시간이 지나 건물 하부에서 조금씩 간격이 보이기 시작하더니 2023년과 최근 1월 15일 사진에서는 건물과 보도블록 간 15㎝ 이상의 상당한 이격이 발생한 것을 확인할 수 있었습니다.</p>
+<p class='spc1'>  실제로 상가 건물 내부 또한 일부 지반 침하로 인해 바닥이 내려앉았고 벽과 천장의 균열이 보이기도 합니다.</p>
+<p class='spc1'>  공동주택의 특성상 방치할 경우 인명 피해도 예견될 수 있어 매우 심각한 상황이었습니다.</p>
+<p class='spc1'>  사회적 안전을 위협하는 문제에 대해서는 공동주택에 맡겨 놓을 게 아니라 선제적이고 적극적인 대처가 필요하다고 생각합니다.</p>
+<p class='spc1'>  최근에는 한 입주자 대표의 노력으로 2023년 크린넷 관련 문제 제기 이후 국토교통부 하자심사·분쟁조정위원회로부터 하자 판정을 받았습니다.</p>
+<p class='spc1'>  적정한 제품을 사용하지 않고 시공한 공동주택 내 크린넷과 학교 내 크린넷 시설을 포함한 공공 부문 크린넷 시설에 대한 대처 또한 시는 미흡했습니다.</p>
+<p class='spc1'>  관련 영상 하나 보시겠습니다.</p>
+<p class='spc1'>  (영상 자료 상영)</p>
+<p class='spc1'>  우리 시가 관리 의무를 가진 지역에 대해서 이렇게 시민 개인이 고군분투하는 동안 어떤 문제를 제기했는지 냉철하게 되돌아봐야 합니다.</p>
+<p class='spc1'>  본 의원의 요구 이후 3·4생활권 자동크린넷 배출 밸브 실린더의 하자 판정에 대해 안내하고 설명회를 개최한 부분에 대해서는 공감하나, 그동안 우리 시가 적극행정을 펼쳐야 함에도 관망하는 태도의 행정 처리 모습으로 느끼게 한 것이 올바른 것이었는지는 자성의 기회로 삼아야 할 것입니다.</p>
+<p class='spc1'>  더욱이 공동주택 관리·지원 업무와 관련해서는 사각지대가 존재해서는 안 됩니다.</p>
+<p class='spc1'>  하지만 우리 시는 또 다른 곳에서도 행정적 미흡함을 드러내고 있었습니다.</p>
+<p class='spc1'>  「세종특별자치시 공동주택 관리 및 지원 조례」 제4조에는 우리 시가 매년 공동주택 안전관리 종합계획을 수립해서 안전의 사각지대가 발생하지 않도록 규정되어 있으나 조례 제정 이후 단 한 차례도 종합계획을 수립한 적이 없습니다.</p>
+<p class='spc1'>  얼마 전 동 지역 시민과의 대화를 통한 공동주택 관련 질의·답변 중 공동주택의 다양한 문제에 대해 자율에 맡기겠다라고 언급했는데 사안별로 접근 방법을 다양화할 필요가 있다고 제안드리고 싶습니다.</p>
+<p class='spc1'>  공동주택 관련 법률 자문 및 행정 법률 지원에 대한 적극적인 대처와 같이 우리 시가 할 수 있는 부분에 대해서는 의지와 역량을 모아 시민들을 위해 적극적인 대응에 나서는 것이 바람직한 시정이 아닐까 생각합니다.</p>
+<p class='spc1'>  공동주택은 행복도시를 구성하는 핵심 요소 중 하나입니다.</p>
+<p class='spc1'>  공공의 영역에서 공동주택에 대한 관심과 지원을 지속하기 위한 우리 시의 적극행정이 절실한 상황이라는 점을 다시 한번 당부드리면서 이상으로 발언을 마치겠습니다.</p>
+<p class='spc1'>  끝까지 경청해 주셔서 감사합니다.</p>
+</div>
+<div class='spkrMBR000044'>
+<p><span class='spkrbld'>○의장 <a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000044' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>임채성</a></span> 유인호 의원님 수고하셨습니다.</p>
+<p class='spc1'>  다음은 김현옥 의원님 나오셔서 발언해 주시기 바랍니다.</p>
+</div>
+<div class='spkrMBR000078'>
+<p><span class='spkrbld'>○<a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000078' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>김현옥</a> 의원</span> 사랑하고 존경하는 39만 세종시민 여러분!</p>
+<p class='spc1'>  선배·동료 의원님과 공무원 여러분!</p>
+<p class='spc1'>  안녕하십니까, 새롬동을 지역구로 두고 있는 더불어민주당 김현옥 의원입니다.</p>
+<p class='spc1'>  오피스텔, 상가, 소규모 아파트 등의 집합건물은 독립적으로 구분되어 다수가 각각 소유권을 가지며, 주로 수익형 부동산으로 소유하는 비율이 높은 건축물입니다.</p>
+<p class='spc1'>  1인 가구는 전체 인구의 3분의 1을 차지하며, 집합건물에 임차 형태로 거주하는 비율은 약 80%를 웃돌고, 소규모 상가, 점포 또한 주로 임차 형태로 운영하고 있지만 관리 제도의 허점으로 곳곳에서 분쟁과 민원이 지속되고 있습니다.</p>
+<p class='spc1'>  우리 시는 총 477개의 집합건물이 있으며, 이 중 전유 부분이 50호 이상인 곳도 178개소입니다.</p>
+<p class='spc1'>  또한 개별 호수 규모는 3만여 개에 달하고 있습니다.</p>
+<p class='spc1'>  매년 수많은 집합건물에서 발생하는 분쟁은 집합건물법에 따라 집합건물분쟁조정위원회를 통한 조정이 이루어지지만 사실상 시행사 또는 관리 주체 등 피신청인이 불응하면 위원회는 개최조차 이루어질 수 없어 수년째 조정이 중지되며 해결되지 못했습니다.</p>
+<p class='spc1'>  집합건물은 민사특별법이 적용되며, 사적 자치 원리가 강하게 작용돼 정부나 지자체의 특별한 감독이나 견제 없이 관리되면서 전국적으로 갈등이 끊이지 않고 있습니다.</p>
+<p class='spc1'>  특히 임차인 비중이 높은 원룸 및 오피스텔의 경우 관리단이 관리 서비스를 제대로 감시하거나 전문적인 감독이 어려운 상황에 시행사가 관리에 개입해 부당한 이득을 취하는 상황도 비일비재합니다.</p>
+<p class='spc1'>  이에 집합건물 실거주자들은 건물의 수선유지가 부실해도 신속한 대응이 어렵고, 부당하게 높은 관리비와 장기수선의 부실에도 전문적인 관리 서비스를 요구하기 어려운 체계로 인해 삶의 질이 저하됩니다.</p>
+<p class='spc1'>  또한 상가 임차인이 부당 관리비 의혹을 인지해도 실소유주로 구성된 관리단 회의를 여는 것조차 사실상 불가능한 상황입니다.</p>
+<p class='spc1'>  정부에서는 2023년 집합건물의 깜깜이 관리비 관행 문제와 주민 갈등을 해소하기 위해 자치단체의 행정감독권을 신설하는 집합건물법을 개정했지만 세부 시행규칙이 없다는 이유로 현장에서는 여전히 주민 분쟁을 관망할 뿐입니다.</p>
+<p class='spc1'>  그러나 시행규칙의 부재에도 불구하고 경기도의 경우 집합건물분쟁조정위를 적극 운영하고 전문가 자문 및 지원단을 마련해 주목받았습니다.</p>
+<p class='spc1'>  서울시 또한 집합건물 통합 정보 채널을 설치하고 관리단 지원 프로그램을 제공하며 분쟁 해결에 발벗고 나서고 있습니다.</p>
+<p class='spc1'>  우리 시도 법 개정에 따라 지난해 5월 표준관리규약 전면 개정안과 가이드라인을 배포했으나 단순한 안내에 불과해 감독권이 신설된 법 개정의 취지에 미치지 못하는 다소 아쉬운 조치라 사료됩니다.</p>
+<p class='spc1'>  이에 본 의원은 증가하는 1인 가구의 주거 복지 실현과 지속적인 분쟁을 완화할 수 있도록 다음과 같이 제안합니다.</p>
+<p class='spc1'>  첫째, 조속히 조례를 제정하고 관리·감독 체계를 구축해 주시기 바랍니다.</p>
+<p class='spc1'>  감독반을 구성하여 분쟁 발생 및 의혹이 있는 집합건물 관리단에 대해 감독을 실시하여 투명한 관리를 보장해 주시기 바랍니다.</p>
+<p class='spc1'>  또한 관리단 구성의 보완이 필요한 부분을 점검하고 시행사의 고의적 개입 및 지연을 방지하기 위한 임시 관리인 그룹 운영을 검토해 주시기 바랍니다.</p>
+<p class='spc1'>  더불어 임차인들이 전문가의 도움을 받을 수 있도록 집합건물 상담 및 지원 프로그램을 마련해 주시기 바라며, 그에 따른 관계자 역량 강화 교육도 당부드립니다.</p>
+<p class='spc1'>  집합건물은 주택관리사 등 전문 자격 요건이 필수인 공동주택과 달리 관리 업무를 수행하는 주체에 대해 일정한 자격 요건을 두지 않고 있기 때문에 전문적인 지식이 결여될 수 있습니다.</p>
+<p class='spc1'>  장기적인 관리·감독 체계가 이루어질 수 있도록 집합건물관리지원센터 설립 등에 대한 검토를 첨언드립니다.</p>
+<p class='spc1'>  도시는 인구 구조 감소 등으로 점차 집적화될 것이 예상됩니다.</p>
+<p class='spc1'>  이런 상황에 분쟁의 장이 되지 않고 상생할 수 있도록 집합건물 관리 사각지대 해소 대책 마련이 필요합니다.</p>
+<p class='spc1'>  상위법이 시대를 반영하는 데 늦더라도 지방자치를 외치는 현시점에서 세종시가 자치단체의 한 축으로 적극적으로 나서 주시길 바라며 발언을 마치겠습니다.</p>
+<p class='spc1'>  끝까지 경청해 주셔서 감사합니다.</p>
+</div>
+<div class='spkrMBR000044'>
+<p><span class='spkrbld'>○의장 <a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000044' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>임채성</a></span> 김현옥 의원님 수고하셨습니다.</p>
+<p class='spc1'>  다음은 홍나영 의원님 나오셔서 발언해 주시기 바랍니다.</p>
+</div>
+<div class='spkrMBR000083'>
+<p><span class='spkrbld'>○<a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000083' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>홍나영</a> 의원</span> 존경하는 39만 세종시민 여러분!</p>
+<p class='spc1'>  선배·동료 의원님 여러분!</p>
+<p class='spc1'>  최민호 시장님과 최교진 교육감님을 비롯한 관계 공무원 여러분!</p>
+<p class='spc1'>  안녕하십니까, 국민의힘 소속 홍나영 의원입니다.</p>
+<p class='spc1'>  본 의원은 오늘 세종시 고향사랑기부제를 통한 기부 문화 확산과 지역경제 활성화에 관한 제언을 하고자 이 자리에 섰습니다.</p>
+<p class='spc1'>  고향사랑기부제는 지방 소멸 위기와 지역 간 발전 격차 문제를 해결하고자 도입되었습니다.</p>
+<p class='spc1'>  기부를 통해 지역 재원을 확보하고 답례품 제공으로 지역경제를 활성화하며, 이를 통해 국가균형발전에 기여하는 제도로 2023년 1월 시행되었습니다.</p>
+<p class='spc1'>  행정안전부에 따르면 지난해 모금된 기부금 총액은 879억 3000만 원으로 전년 대비 35%를 초과하며 고향사랑기부제가 성공적으로 안착했다는 평가를 했습니다.</p>
+<p class='spc1'>  세종시도 2023년 1억 4500만 원에서 2024년에는 2억 9900만 원으로 2배 가까이 늘어난 모금 성과를 보였습니다.</p>
+<p class='spc1'>  하지만 고향사랑기부제 3년 차를 맞는 세종시 운영 내용을 들여다보면 성과와 긍정적인 측면만 있는 것은 아닙니다.</p>
+<p class='spc1'>  본 의원은 지난 제94회 정례회 행정복지위원회 회의 중 질의를 통해 세종시 고향사랑기부제 답례품 선정과 관리 체계에 관한 문제를 지적한 바 있습니다.</p>
+<p class='spc1'>  고향사랑기부제 답례품이었던 한글빵은 100% 세종 지역에서 생산된 쌀과 복숭아를 사용한다고 대대적으로 홍보하며 호황을 누렸지만 실제로는 수입산을 사용해 원산지 거짓 표시 혐의로 농산물품질관리원으로부터 시정 조치 명령을 받고 기부 답례품 지정도 철회되었습니다.</p>
+<p class='spc1'>  답례품이 기부자의 만족도나 지자체의 기부 실적 향상에 영향을 미치는 것은 자명한 것으로, 이로 인해 세종시 고향사랑기부제 자체의 신뢰성을 훼손하고, 나아가 세종시 이미지에도 부정적인 영향을 끼치게 되었다고 생각합니다.</p>
+<p class='spc1'>  이러한 일이 또다시 발생하지 않도록 답례품 선정과 품질 관리를 위한 대책 마련이 시급합니다.</p>
+<p class='spc1'>  다행히 본 의원의 지적 이후 소관 부서에서 답례품 관리 강화 방안을 마련하기도 했습니다.</p>
+<p class='spc1'>  하지만 여기에 그치지 않고 답례품 개발 및 품질 관리 강화를 위한 실질적인 역할을 수행해 지속적인 관리를 이어 나가야 할 것입니다.</p>
+<p class='spc1'>  또한 농특산물이나 지역상품권뿐 아니라 세종시에서 보고, 즐기고, 체험할 수 있는 지역 관광·문화와 연계한 다양한 답례품을 기획·발굴해야 합니다.</p>
+<p class='spc1'>  현재 세종시 답례품 중 관광·체험형 상품은 전무한 상황입니다.</p>
+<p class='spc1'>  기부한 지역에 대한 고향 사랑을 더 느낄 수 있게 하고, 실제 방문으로 이어질 수 있는 체험형 답례품으로 체류 인구를 늘리고 다양한 연령층의 기부 확보에 노력해야 할 것입니다.</p>
+<p class='spc1'>  마지막으로 기부금 활용을 위한 기부 사업 추진이 필요합니다.</p>
+<p class='spc1'>  세종시는 여전히 기부금을 예치한 상태로, 기금 사업이 구체화되지 않았습니다.</p>
+<p class='spc1'>  지역 공동체 활성화와 지역 발전에 기여할 맞춤형 사업을 적극적으로 추진해 주시기 바랍니다.</p>
+<p class='spc1'>  특히 세종시는 올해 주요 업무 추진 계획 발표에서 지난해 법 개정으로 새롭게 도입된 ‘고향사랑 지정기부’를 활용해 반려동물 휴게 공간을 설치할 계획을 밝혔습니다.</p>
+<p class='spc1'>  이러한 계획이 구체적으로 추진돼 지정기부 사업이 모범적인 성공 사례로 자리 잡기를 기대합니다.</p>
+<p class='spc1'>  아울러 기부 문화 확산과 지역경제 활성화를 도모해 국가균형발전에 기여하는 고향사랑기부제의 취지와 목적에 맞는 운영을 거듭 당부드리며 5분 자유발언을 마치겠습니다.</p>
+<p class='spc1'>  끝까지 경청해 주셔서 감사합니다.</p>
+</div>
+<div class='spkrMBR000044'>
+<p><span class='spkrbld'>○의장 <a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000044' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>임채성</a></span> 홍나영 의원님 수고하셨습니다.</p>
+<p class='spc1'>  이상 여섯 분 의원께서 발언하신 5분 자유발언에 대해 집행부에서는 발언 내용을 충분히 검토하여 정책에 적극 반영해 주시기 바라며, 구체적인 보고가 필요한 경우에는 별도 보고해 주시기 바랍니다.</p>
+<p class='spc1'>  그럼 의사일정에 들어가도록 하겠습니다.</p>
+<p><hr /></p>
+</div>
+</div>
+<div class='agnd_3'>
+<p><a name='agnd_3'></a><span class='bld'>1. 제96회 세종특별자치시의회 임시회 회기 결정의 건(의장 제의)(의안번호 4468)</span></p>
+<p class='align_right'>(10시50분)</p>
+<div class='spkrMBR000044'>
+<p><span class='spkrbld'>○의장 <a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000044' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>임채성</a></span> 의사일정 제1항 제96회 세종특별자치시의회 임시회 회기 결정의 건을 상정합니다.</p>
+<p class='spc1'>  금번 임시회 회기는 의회운영위원회와 협의한 대로 2025년도 주요 업무 계획 보고 청취, 조례안 및 기타 안건 심의 등을 위하여 2월 4일부터 2월 14일까지 11일간 운영코자 하는데 이의 없으십니까?</p>
+<p class='spc3'>      (『네.』 하는 의원 있음)</p>
+<p class='spc1'>  이의가 없으므로 가결되었음을 선포합니다.</p>
+<p class='spc3'>      (부록 참조)</p>
+<p><hr /></p>
+</div>
+</div>
+<div class='agnd_4'>
+<p><a name='agnd_4'></a><span class='bld'>2. 제96회 세종특별자치시의회 임시회 회의록 서명의원 선임의 건(의장 제의)(의안번호 4469)</span></p>
+<p class='align_right'>(10시51분)</p>
+<div class='spkrMBR000044'>
+<p><span class='spkrbld'>○의장 <a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000044' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>임채성</a></span> 다음은 의사일정 제2항 제96회 세종특별자치시의회 임시회 회의록 서명의원 선임의 건을 상정합니다.</p>
+<p class='spc1'>  이번 임시회 회의록에 서명하실 의원님은 「세종특별자치시의회 회의 규칙」 제56조에 따라 김재형 의원님과 김충식 의원님을 선임코자 하는데 이의 없으십니까?</p>
+<p class='spc3'>      (『네.』 하는 의원 있음)</p>
+<p class='spc1'>  이의가 없으므로 가결되었음을 선포합니다.</p>
+<p class='spc3'>      (부록 참조)</p>
+<p><hr /></p>
+</div>
+</div>
+<div class='agnd_5'>
+<p><a name='agnd_5'></a><span class='bld'>3. 국가균형발전 및 행정수도 완성을 위한 공공기관 이전 촉구 결의안(이순열 의원 대표발의)(의안번호 4467)</span></p>
+<p class='align_right'>(10시51분)</p>
+<div class='spkrMBR000044'>
+<p><span class='spkrbld'>○의장 <a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000044' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>임채성</a></span> 다음은 의사일정 제3항 국가균형발전 및 행정수도 완성을 위한 공공기관 이전 촉구 결의안을 상정합니다.</p>
+<p class='spc1'>  행정복지위원회 김현미 위원장님 나오셔서 심사보고 해 주시기 바랍니다.</p>
+</div>
+<div class='spkrMBR000076'>
+<p><span class='spkrbld'>○행정복지위원장 <a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000076' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>김현미</a></span> 안녕하십니까, 행정복지위원회 위원장 김현미입니다.</p>
+<p class='spc1'>  존경하는 임채성 의장님 그리고 동료 의원님 여러분!</p>
+<p class='spc1'>  이번 제96회 세종특별자치시의회 임시회 행정복지위원회 제1차 회의에서 심사한 결의안 1건에 대한 심사 결과를 보고드리겠습니다.</p>
+<p class='spc1'>  이순열 의원이 대표발의 한 의안번호 제4467호 국가균형발전 및 행정수도 완성을 위한 공공기관 이전 촉구 결의안입니다.</p>
+<p class='spc1'>  수도권에 잔류한 업무 연관성이 높은 공공기관의 추가 이전에 대한 구체적인 이행 로드맵을 조속히 마련할 것을 대한민국 정부와 대통령실 등에 촉구하려는 것으로 원안 가결하였습니다.</p>
+<p class='spc1'>  보다 자세한 내용은 심사보고서를 참고하여 주시기 바라며, 이상 보고드린 안건은 행정복지위원회에서 심도 있게 심사한 점을 고려하시어 행정복지위원회 심사안대로 의결해 주실 것을 부탁드리며 심사보고를 마치겠습니다.</p>
+<p class='spc1'>  감사합니다.</p>
+<p class='spc3'>      (부록 참조)</p>
+</div>
+<div class='spkrMBR000044'>
+<p><span class='spkrbld'>○의장 <a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000044' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>임채성</a></span> 김현미 위원장님 수고하셨습니다.</p>
+<p class='spc1'>  다음은 질의·토론 순서입니다만 사전에 신청하신 의원님이 안 계시므로 질의와 토론을 생략고자 하는데 이의 없으십니까?</p>
+<p class='spc3'>      (『네.』 하는 의원 있음)</p>
+<p class='spc1'>  이의가 없으므로 질의와 토론을 생략합니다.</p>
+<p class='spc1'>  다음은 의결을 하도록 하겠습니다.</p>
+<p class='spc1'>  의사일정 제3항 국가균형발전 및 행정수도 완성을 위한 공공기관 이전 촉구 결의안을 행정복지위원회에서 심사보고 한 대로 가결코자 하는데 이의 없으십니까?</p>
+<p class='spc3'>      (『네.』 하는 의원 있음)</p>
+<p class='spc1'>  이의가 없으므로 가결되었음을 선포합니다.</p>
+<p class='dotline'></p>
+<p class='spc1'>  ·재석의원(20인)</p>
+<p class='spc1'>  ·찬성의원(20인)</p>
+<p class='spc1'>  김광운  김동빈  김영현  김재형  김충식  김학서  김현미  김현옥  김효숙  박란희</p>
+<p class='spc1'>  상병헌  안신일  여미전  유인호  윤지성  이순열  이현정  임채성  최원석  홍나영</p>
+<p class='dotline'></p>
+<p class='spc1'>  국가균형발전 및 행정수도 완성을 위한 공공기관 이전 촉구 결의안을 대표발의 하신 이순열 의원님 나오셔서 결의문을 낭독해 주시기 바랍니다.</p>
+</div>
+<div class='spkrMBR000058'>
+<p><span class='spkrbld'>○<a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000058' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>이순열</a> 의원</span> 안녕하십니까, 이순열 의원입니다.</p>
+<p class='spc1'>  지금부터 국가균형발전 및 행정수도 완성을 위한 공공기관 이전 촉구 결의문을 낭독하겠습니다.</p>
+<p class='spc1'>  정부는 지난 2003년 수도권 집중화에 따른 지역 간 불균형을 해소하고 지역 특성에 맞는 자립적 발전을 위해 「국가균형발전 특별법」을 제정하고 공공기관 지방 이전 방침 및 2005년 혁신도시와 이전 대상 공공기관을 지정 발표하였다.</p>
+<p class='spc1'>  수도권에 있던 154개의 공공기관을 2019년까지 전국 10개 혁신도시와 세종시로 이전하였다.</p>
+<p class='spc1'>  그러나 제1차 공공기관 이전은 인구 분산 및 혁신도시와 혁신도시 간, 혁신도시와 주변 지역 간 연계 발전 등을 목표로 했던 효과가 기대에 미치지 못하는 한계를 드러냈고, 2018년 다시 인구가 수도권으로 집중되면서 국토교통부는 정부의 국정과제이자 지방 소멸을 막기 위해 제2차 공공기관 지방 이전 계획 수립을 위한 혁신도시 성과 평가 및 정책 방향 연구용역을 추진하였다.</p>
+<p class='spc1'>  하지만 국토교통부의 연구용역 사업 기간이 2024년 말에서 2025년 10월로 연장되면서 공공기관 추가 이전 계획 발표도 미뤄지게 되었고, 12.3 비상계엄 사태에 따른 탄핵 정국 등이 겹치면서 이전 계획은 더욱 늦춰질 가능성이 큰 상황이다.</p>
+<p class='spc1'>  아직도 20개의 중앙행정기관과 총 339곳의 공공기관 중 157곳, 즉 46%가 수도권에 본사를 두고 있으며, 이 중 서울이 122개로 전체의 36%를 차지하고 있다.</p>
+<p class='spc1'>  인구와 경제의 수도권 과밀화를 해결하지 않고 지역 소멸 문제를 논할 수 없기에 공공기관 이전은 수도권 비대화를 극복하고 소멸 위기에 처한 지역 회생의 기폭제가 될 것이다.</p>
+<p class='spc1'>  따라서 10년 이상의 조성 기간이 걸리는 점을 감안하여 성공적인 공공기관 이전을 위해 이전 계획을 제대로 수립하여 차기 정부에서 이를 이어 나갈 수 있도록 더 이상 지체하지 말고 조속히 결정하여 실행해야 할 것이다.</p>
+<p class='spc1'>  그간 우리 시는 국가균형발전과 수도권 과밀화 해소라는 대의를 실현하기 위해 설계된 대한민국의 행정수도로 2012년 행정중심복합도시로 출범한 이후 23개의 중앙행정기관과 소속 기관 22개, 그와 연계된 10개 공공기관, 16개의 국책연구기관이 이전하며 행정수도로서의 기반을 다져왔다.</p>
+<p class='spc1'>  그러나 여성가족부, 법무부 등 중앙행정기관 및 위원회가 여전히 수도권에 남아 있어 세종시 이전 기관과의 업무 협연 및 연계성 부족으로 행정 비효율이 발생하여 문제점으로 지적되고 있다.</p>
+<p class='spc1'>  현재까지 수도권에 잔류한 주요 공공기관과 중앙행정기관의 세종시 미이전으로 인해 행정수도의 완성도가 여전히 부족한 상황이다.</p>
+<p class='spc1'>  이는 수도권 초집중 문제를 심화시키고 지역 간 경제적 불균형을 더욱 가중시키는 주요 원인으로 작용하고 있다.</p>
+<p class='spc1'>  이에 세종특별자치시의회는 중앙부처와 업무 연관성이 높은 미이전 공공기관을 세종시로 추가 이전하여 행정수도 완성 및 업무 효율성을 제고할 수 있도록 39만 세종시민의 뜻을 모아 다음과 같이 결의한다.</p>
+<p class='spc1'>  하나. 「지방자치분권 및 지역균형발전에 관한 특별법」에 따라 현재 수도권에 소재하는 공공기관 및 유관기관, 그리고 공공기관이 투자하거나 출자한 회사의 지방 이전을 위한 구체적인 이행 방안을 조속히 마련하여 재추진하라.</p>
+<p class='spc1'>  하나. 공공기관 추가 이전은 이미 조성된 도시의 연속성과 연계성이 담보되도록 유사 기능을 가진 공공기관을 그룹화하여 권역별 집단 이전이 가능하도록 균형 있고 효율적인 정책 방향을 수립하라.</p>
+<p class='spc1'>  하나. 정부는 세종시 출범 취지에 맞게 행정수도로서의 기능을 온전히 수행할 수 있도록 수도권에 잔류 중인 중앙행정기관 및 관련 공공기관의 신속한 이전을 추진하라.</p>
+<p class='spc1'>  2025년 2월 4일 세종특별자치시의회.</p>
+</div>
+<div class='spkrMBR000044'>
+<p><span class='spkrbld'>○의장 <a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000044' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>임채성</a></span> 이순열 의원님 수고하셨습니다.</p>
+<p><hr /></p>
+</div>
+</div>
+<div class='agnd_6'>
+<p><a name='agnd_6'></a><span class='bld'>4. 2025년도 세종특별자치시 주요업무계획 보고 청취의 건</span></p>
+<p class='align_right'>(11시00분)</p>
+<div class='spkrMBR000044'>
+<p><span class='spkrbld'>○의장 <a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000044' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>임채성</a></span> 다음은 의사일정 제4항 2025년도 세종특별자치시 주요업무계획 보고 청취의 건을 상정합니다.</p>
+<p class='spc1'>  최민호 시장님 나오셔서 보고해 주시기 바랍니다.</p>
+</div>
+<div class='spkr0030'>
+<p><span class='spkrbld'>○시장 최민호</span> 존경하는 시민 여러분!</p>
+<p class='spc1'>  임채성 의장님과 의원 여러분!</p>
+<p class='spc1'>  아직 찬바람이 매서운 겨울이지만 이 시린 계절을 뚫고 피어날 봄날의 새싹처럼 희망을 고이 품고 의원 여러분들을 뵙습니다.</p>
+<p class='spc1'>  2025년 우리는 대한민국 역사에 기록될 중차대한 한 해를 맞이하고 있습니다.</p>
+<p class='spc1'>  올해는 국가적으로 그리고 우리 세종시의 미래를 위한 중대한 전환점이 될 것입니다.</p>
+<p class='spc1'>  우리 시는 그동안 실질적인 행정수도로서 국가균형발전의 핵심 역할을 수행하며 진정한 수도를 목표로 전력을 다해 왔습니다.</p>
+<p class='spc1'>  어떤 도시보다 창조적이고 도전적인 자세로 대한민국의 수도로서의 위상을 확보해 왔다고 생각합니다.</p>
+<p class='spc1'>  정부합동평가 1위, 가장 살기 좋은 도시 1위, 지방규제혁신 평가 1위 등 대외적으로 행정력을 인정받았고, 작년 연말에는 대한민국 문화도시로 최종 지정되어 행정수도라는 지위에 걸맞은 한글문화도시로서의 문화적 정체성을 확고하게 다지는 큰 성과도 있었습니다.</p>
+<p class='spc1'>  이제 국민들의 인식 속에 세종시는 명실상부한 국정 운영의 중추 도시이자 행정수도, 살고 싶은 도시로 자리매김한 것입니다.</p>
+<p class='spc1'>  2025년은 행정수도 개헌을 이루어 이러한 노력에 방점을 찍는 한 해가 되길 기대합니다.</p>
+<p class='spc1'>  대통령 집무실을 세종시로 이전하는 것 역시 대한민국이 미래로 나아가기 위해 반드시 이루어야 할 역사적 사명입니다.</p>
+<p class='spc1'>  개헌과 행정수도 완성이라는 역사적 과제를 완성, 완수하기 위해서는 시의회와 시민들의 노력이 한데 모아져야 가능한 일입니다.</p>
+<p class='spc1'>  존경하는 시민 여러분!</p>
+<p class='spc1'>  임채성 의장님과 의원 여러분!</p>
+<p class='spc1'>  2025년은 정치·행정·경제 전 분야에 걸쳐 새로운 도전을 맞이하게 될 것입니다.</p>
+<p class='spc1'>  세종시가 처한 상황도 녹록지 않습니다.</p>
+<p class='spc1'>  그러나 어려울수록 원칙으로 돌아가야 합니다.</p>
+<p class='spc1'>  본립도생(本立道生), 본질이 바로 설 때 길이 보인다는 말입니다.</p>
+<p class='spc1'>  앞으로 세종시가 나아가야 할 길도 시민의 삶과 행복, 미래의 번영이라는 기본에서 출발해야 합니다.</p>
+<p class='spc1'>  올 한 해 시민들이 겪고 있는 경제적 어려움을 조금이라도 해소해야 한다는 절실한 각오로 시정에 임하겠습니다.</p>
+<p class='spc1'>  도시의 가치를 높이고 지역경제를 살려 시민이 돈을 버는 시정을 펼치겠습니다.</p>
+<p class='spc1'>  우선 지역경제를 살리고 도시의 지속 가능한 발전을 위해서는 지역을 사랑하는 자긍심, 애향심이 꼭 필요합니다.</p>
+<p class='spc1'>  타 자치단체와 달리 세종시는 이주민이 30만 명 정도로 전체 인구 39만 명 대비 다수를 구성하고 있습니다.</p>
+<p class='spc1'>  또한 세종시민의 1인당 소비 지출액은 전국 1위이지만 역외 소비 유출도 전국 1위입니다.</p>
+<p class='spc1'>  출범 13년을 맞는 우리 시의 현실입니다.</p>
+<p class='spc1'>  이제 외형적 성장을 넘어 우리 시 발전을 위한 국가적 과제에도 한목소리를 낼 수 있는 단결력이 필요합니다.</p>
+<p class='spc1'>  이를 위해 저는 세종사랑운동을 제안합니다.</p>
+<p class='spc1'>  세종사랑운동은 시민이 중심이 되어 자긍심과 애향심을 높이며, 지역을 살리기 위한 시민 정신 자본을 일깨우고, 분절된 시민들이 서로 합심하는 초석이 될 것입니다.</p>
+<p class='spc1'>  인구 40만 명을 눈앞에 두고 있는 현 시점이 세종사랑운동을 시작할 적기입니다.</p>
+<p class='spc1'>  시민, 의원 여러분!</p>
+<p class='spc1'>  모두 세종시를 사랑하는 마음 하나로 함께해 주시기를 요청드립니다.</p>
+<p class='spc1'>  아울러 시민과 함께 어려운 민생경제를 살리기 위해 관광 및 상권 활성화에도 전심전력을 다하겠습니다.</p>
+<p class='spc1'>  지난 1월부터 전국 최초로 세종시 야간 관광을 책임지는 야간 부시장이 활동을 시작했습니다.</p>
+<p class='spc1'>  전국적인 문화예술행사를 유치하고 야간 경제 활성화를 위한 과제를 발굴하는 등 세종시 관광문화를 새로운 시각으로 혁신해 나갈 것입니다.</p>
+<p class='spc1'>  소상공인지원센터 설치, 상가공실박람회 개최, 특화 상권 지원 등 어려운 소상공인과 상권을 살리기 위한 시책에도 힘쓰겠습니다.</p>
+<p class='spc1'>  이러한 노력이 모여 도시의 가치를 높이고 시민이 세종시를 자랑스럽게 느끼도록 해야 합니다.</p>
+<p class='spc1'>  국가균형발전이라는 소명 아래 출범한 우리 시는 지난 한 해 기존의 형식과 틀을 깨고 5대 미래 비전이라는 도시 정체성을 확립하였습니다.</p>
+<p class='spc1'>  바로 행정수도, 한글문화도시, 박물관도시, 정원관광도시, 혁신산업도시입니다.</p>
+<p class='spc1'>  5대 비전은 세종시만이 가질 수 있는 잠재력과 자산에 기반해 도시의 가치를 높이고, 시민들이 어디를 가셔도 세종시를 자랑스럽게 얘기할 수 있는 정체성입니다.</p>
+<p class='spc1'>  행정수도 개헌과 대통령 집무실, 국회의사당 완전 이전을 통해 행정수도의 위상과 지위를 완성하고, 국립박물관단지, 시립미술관, 시립박물관 등 문화 기반 시설을 확충하여 전 세계에서 찾아오는 대한민국 행정수도이자 대표 박물관도시로 나아갈 것입니다.</p>
+<p class='spc1'>  지난해 한글을 주제로 대한민국 문화도시에 지정된 것을 계기로 세종시를 한글 세계화의 중심 기지이자 한글 콘텐츠 산업의 요충지로 확장하겠습니다.</p>
+<p class='spc1'>  동시에 한글 교육·연구기관을 유치하고, 세종시를 ‘한글’ 하면 가장 먼저 떠오르는 한글문화도시로 완성해 시민들께서 자부심을 느낄 수 있도록 하겠습니다.</p>
+<p class='spc1'>  기회발전특구, 교육발전특구, 경제자유구역 지정 등 특구 제도를 활용해 신기술의 테스트 베드이자 혁신산업을 선도하는 도시로 나아가겠습니다.</p>
+<p class='spc1'>  마지막으로 녹지율 52%의 계획된 생태정원도시 인프라를 살려 시민 발길이 닿는 곳곳마다 푸른 이야기가 가득한 정원문화를 융성하게 키우겠습니다.</p>
+<p class='spc1'>  정원도시과를 신설하여 자연, 녹지, 도시와 정원산업이 어우러지는 정원도시 비전을 완성할 체계를 갖춰 도시의 부가가치를 높이도록 하겠습니다.</p>
+<p class='spc1'>  임채성 의장님과 의원 여러분!</p>
+<p class='spc1'>  본립도생, 시민이 민주주의의 근본이라는 본질로 돌아가 시민 한 사람 한 사람이 행복하고 자부심을 느낄 수 있는 도시를 만들어 갑시다.</p>
+<p class='spc1'>  시장으로서 모든 공직자의 역량과 세종시를 사랑하는 마음을 하나로 모아 시민 여러분과 함께 세종시를 대한민국의 미래를 이끄는 도시로 성장시켜 나겠습니다.</p>
+<p class='spc1'>  2025년 출범 13년이 된 세종시가 시민들의 마음을 하나로 모아 진정한 수도로 다시 태어나는 해로 대한민국 역사에 기록될 수 있도록 의원 여러분께서 힘과 뜻을 모아 주실 것을 부탁드립니다.</p>
+<p class='spc1'>  양해해 주신다면 올해 세종시 주요 업무 계획에 대한 보다 상세한 내용은 기획조정실장으로 하여금 설명드리도록 하겠습니다.</p>
+<p class='spc1'>  감사합니다.</p>
+</div>
+<div class='spkrMBR000044'>
+<p><span class='spkrbld'>○의장 <a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000044' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>임채성</a></span> 시장님 수고하셨습니다.</p>
+<p class='spc1'>  다음은 이용일 기획조정실장님 나오셔서 보고해 주시기 바랍니다.</p>
+</div>
+<div class='spkr0359'>
+<p><span class='spkrbld'>○기획조정실장 이용일</span> 존경하는 임채성 의장님 그리고 의원님 여러분!</p>
+<p class='spc1'>  지금부터 2025년 주요 업무 계획을 5개 분야로 나누어 보고를 드리도록 하겠습니다.</p>
+<p class='spc1'>  첫째, 도시 가치를 높이는 일에 힘쓰겠습니다.</p>
+<p class='spc1'>  현재 혼란한 국내 정치 상황 속에서 다양한 개헌 논의가 이루어지고 있습니다.</p>
+<p class='spc1'>  우리 시는 행정수도 지위를 확보하기 위하여 행정수도 명문화 개헌을 최우선 목표로 설정하고, 국회와 대통령실의 완전 이전을 목표로 시민사회와 함께 연대 체계를 구축해 나가겠습니다.</p>
+<p class='spc1'>  그동안 공들여 마련한 세종시법 전면 개편안을 국회에 발의하는 노력도 지역 국회의원분들과 협력하여 지속 추진하겠습니다.</p>
+<p class='spc1'>  아울러 미이전 중앙기관과 공공기관의 추가 유치를 위해 전략적인 계획을 수립하여 추진해 나가도록 하겠습니다.</p>
+<p class='spc1'>  세종시는 공공 행정도시로서 공공 마이스산업의 최적의 여건을 갖춘 도시입니다.</p>
+<p class='spc1'>  연내 공공 마이스산업 육성 종합 계획을 수립하고 대규모 행사를 위한 컨벤션 시설을 확충해 나가겠습니다.</p>
+<p class='spc1'>  특히 전국 최대 규모의 아트페스티벌인 코카카(KoCACA) 행사를 비롯해 공공 행사를 집중 유치해 마이스산업을 육성해 나가겠습니다.</p>
+<p class='spc1'>  우리 시는 정원 속의 도시 프로젝트, 비단강 금빛 프로젝트를 통해 시민을 위한 정원 관광 기반을 적극 조성해 왔습니다.</p>
+<p class='spc1'>  앞으로도 도시숲과 가로수, 마을정원을 조성해 시민 여러분의 삶에 치유와 활력을 더하고 이를 뒷받침할 인재와 산업을 육성하겠습니다.</p>
+<p class='spc1'>  또한 K-water 수변공원 조성과 수상 레저 활성화 등 친환경 관광 개발을 적극 지원해 나가겠습니다.</p>
+<p class='spc1'>  시민이 체감하는 탄소중립 정책을 실현하고 자원 선순환을 통해 더 나은 도시환경을 만들어 가겠습니다.</p>
+<p class='spc1'>  가칭 녹색환경재단 설립과 에코기금 조성을 통해 민관 협력 체계를 구축하고 탄소중립 실천을 위한 범시민 운동을 전개해 나가겠습니다.</p>
+<p class='spc1'>  다수 민원이 야기되고 있는 자동집하시설 관리를 개선하고, 친환경 종합타운 조성도 본격 추진하겠습니다.</p>
+<p class='spc1'>  시민의 삶을 더 편리하게 만들어 나가겠습니다.</p>
+<p class='spc1'>  작년에 스마트시티 국가시범도시 사업 시행자가 확정됨에 따라 특화 계획을 수립하고 본격 개발해 나가겠습니다.</p>
+<p class='spc1'>  도시통합운영센터 기능을 더욱 강화하고 스마트 통합 플랫폼을 구축해 다양한 전자 증명 기능을 연계하는 등 시민이 더욱 편리한 스마트 서비스를 제공해 나가겠습니다.</p>
+<p class='spc1'>  민원 행정에도 스마트 기술을 적극 도입하겠습니다.</p>
+<p class='spc1'>  민원 신청 시 제출해야 하는 추가 구비 서류를 줄이고 AI 상담 서비스가 탑재된 민원콜센터를 운영해서 시대를 앞서가는 민원 행정을 실현하겠습니다.</p>
+<p class='spc1'>  둘째, 지역경제를 살리겠습니다.</p>
+<p class='spc1'>  활력이 넘치는 지역경제를 만들어 가겠습니다.</p>
+<p class='spc1'>  행복청, LH와 함께 투자 유치 원팀을 지속 운영하고, 시장님을 비롯한 지휘부가 직접 기업을 방문해 3조 원의 누적 투자 유치 목표를 달성하겠습니다.</p>
+<p class='spc1'>  공공 임대형 지식산업센터를 2026년까지 건립해 창업 생태계를 확충하고, 세종시 일자리 플랫폼인 잡아람 플랫폼을 더욱 고도화해 나가겠습니다.</p>
+<p class='spc1'>  또한 상권별 특화 콘텐츠를 개발하고 상반기에 소상공인종합지원센터를 설립해서 소상공인을 위한 맞춤형 지원을 강화하도록 하겠습니다.</p>
+<p class='spc1'>  특히 상가 공실 문제 해결을 위해서 행복청, LH 등과 공동 대응 체계를 구축하고 상권성장대책추진단을 운영해 나가도록 하겠습니다.</p>
+<p class='spc1'>  미래를 여는 혁신산업도시를 조성하도록 하겠습니다.</p>
+<p class='spc1'>  작년에 우리 시는 교육 및 기회발전특구로 지정되면서 혁신산업 육성을 위한 발판을 마련하였습니다.</p>
+<p class='spc1'>  대전·세종 경제자유구역 지정도 조속히 완료하여 이른바 3특 기반 조성을 연내 마무리하도록 하겠습니다.</p>
+<p class='spc1'>  제3차 드론특구 지정, 자율주행버스 운행 확대, AI 기반의 헬스케어와 재난안전관리 실증 사업을 통해 혁신 기술 기반의 산업 생태계를 구축해 나가겠습니다.</p>
+<p class='spc1'>  특히 양자기업 유치, 중입자가속기 암치료센터 건립, 충청권 정보보호 클러스터 구축 사업을 적극 추진해 세종시의 미래 먹거리 산업을 육성해 나가겠습니다.</p>
+<p class='spc1'>  모두가 잘사는 도농 상생 도시를 만들겠습니다.</p>
+<p class='spc1'>  그동안 시는 세종미래마을의 단계별 조성을 통해 새로운 농촌마을의 모델을 제시해 왔습니다.</p>
+<p class='spc1'>  앞으로도 빈집과 빈터를 정비하고 공동이용시설을 활용해 농촌 체험장을 조성하는 등 자립적이고 지속 가능한 농촌마을을 만들어 가겠습니다.</p>
+<p class='spc1'>  시는 2023년 특·광역시 최초로 농업인수당을 도입하고 싱싱장터를 지속 확산하는 등 도농 상생을 실현해 왔습니다.</p>
+<p class='spc1'>  앞으로 6차 산업과 청년농 육성에 더욱 집중하고 지역대표 특산물을 활용한 신사업 발굴도 힘쓰도록 하겠습니다.</p>
+<p class='spc1'>  셋째, 전국에서 찾아오는 도시로 만들어 가겠습니다.</p>
+<p class='spc1'>  우리 시는 세계를 잇는 한글문화도시라는 주제로 2023년에 대한민국 문화도시로 예비 지정되었고, 2024년에 최종 지정되는 쾌거를 이루었습니다.</p>
+<p class='spc1'>  이는 세종시가 한글 대표 도시임을 공인받은 것으로서 앞으로 문체부 등 주요 기관과 협업을 통해 한글문화글로벌센터를 구축하고 한글 기관을 유치하여 세종시를 한글문화의 거점도시로 육성해 나가겠습니다.</p>
+<p class='spc1'>  한글날 정부 경축식을 매년 세종시에 개최하여 세계적인 기념행사로 격상해 나가도록 하겠습니다.</p>
+<p class='spc1'>  특히 세종축제를 한글로 정체성을 확립하고, 한글 비엔날레 등 국제행사와 연계하도록 하겠습니다.</p>
+<p class='spc1'>  세계가 주목하는 박물관도시를 만들어 가겠습니다.</p>
+<p class='spc1'>  우리 시는 최고의 박물관단지가 조성 중이고, 시 자체적으로 시립박물관, 시립미술관 등 문화 기반 시설을 지속적으로 확충해 나가고 있습니다.</p>
+<p class='spc1'>  앞으로 가칭 박물관협회를 설립해 효율적인 박물관 운영 체계를 갖추고 국제 협력을 강화하여 공동 전시도 추진해 나가도록 하겠습니다.</p>
+<p class='spc1'>  또한 지역의 대표 문화를 계승하고 널리 알리기 위해 지역 문화 브랜드를 적극 육성해 나가도록 하겠습니다.</p>
+<p class='spc1'>  장욱진 생가 기념관을 시립미술관으로 조성하고 내판역 미술마을을 지역 예술의 거점으로 발전시키겠습니다.</p>
+<p class='spc1'>  또한 조치원에 남아 있는 구 한림제지, 구 산일제사 공장 등 근대 문화유산을 지역 문화의 거점으로 조성하겠습니다.</p>
+<p class='spc1'>  품격과 매력이 넘치는 관광도시를 조성하겠습니다.</p>
+<p class='spc1'>  낙화축제, 복숭아축제, 세종축제, 빛축제 등 사계절 축제 도시로의 정체성을 성공적으로 확립해 왔습니다.</p>
+<p class='spc1'>  이는 세종시가 가진 무형의 자산으로서 앞으로 더욱 완성도를 높여 나가도록 하겠습니다.</p>
+<p class='spc1'>  또한 우리 시의 명소와 맛집, 공연을 연계하고 야간 부시장 책임하에 야관 관광을 활성화시켜 지역 관광과 지역경제의 활력을 크게 증대시키겠습니다.</p>
+<p class='spc1'>  2027년 충청권하계세계대학경기도 본격 준비하도록 하겠습니다.</p>
+<p class='spc1'>  폐막식 개최와 선수촌 조성과 관련해 지역 상권과의 연계 방안을 미리 준비해 나가겠으며, 국립 체육영재학교를 유치해 도시 가치를 높여 나가도록 하겠습니다.</p>
+<p class='spc1'>  넷째, 안전하고 편리한 도시를 만들도록 하겠습니다.</p>
+<p class='spc1'>  지난해 대중교통 월 정액권인 이응패스를 도입하고 버스 확충, 노선 확대 개편 등 세종시 대중교통에 큰 혁신을 이루었습니다.</p>
+<p class='spc1'>  앞으로도 시민 편의와 수익성을 재고하여 월 1회 대중교통 이용의 날을 운영하여 대중교통 활성화와 더불어 지역경제 활성화가 서로 연계되도록 추진하겠습니다.</p>
+<p class='spc1'>  광역 교통망 확충도 적극 추진하도록 하겠습니다.</p>
+<p class='spc1'>  충청권 광역급행철도 CTX 사업을 민자 유치로 추진하고 세종-공주 BRT, 세종-조치원 BRT 등 세종 중심의 광역 대중교통망을 구축하겠습니다.</p>
+<p class='spc1'>  또한 서울-세종 고속도로, 첫마을IC 신설 등 주민숙원사업을 적극 챙겨 나가도록 하겠습니다.</p>
+<p class='spc1'>  시민이 안전한 도시를 만들도록 하겠습니다.</p>
+<p class='spc1'>  우리 시는 자연재해 지역 안전도 향상, 시민안심보험 보장 확대 등 안전 분야에서 시민이 체감하는 여러 성과를 달성해 나가고 있습니다.</p>
+<p class='spc1'>  2025년에는 범시민적 안전 역량 강화를 위해 세종시민 안전 주간을 집중 운영하고, 지역 안전지수 기반의 안전관리 체계를 구축하겠습니다.</p>
+<p class='spc1'>  데이터 기반의 재난안전관리 체계와 스마트 기술 기반의 대응 체계를 적극 도입하고, 유엔(UN) 방재안전도시 인증이라는 새 목표에 도전하도록 하겠습니다.</p>
+<p class='spc1'>  지역응급기관 정상화를 위해 적극 지원하고, 충청권 응급의료 네트워크를 강화해 나가도록 하겠습니다.</p>
+<p class='spc1'>  지역 특성을 고려해 신생아 전문 의료 체계를 강화하고, 보건의료서비스인 똑똑건강 앱도 더욱 활성화하도록 하겠습니다.</p>
+<p class='spc1'>  다섯째, 누구나 살기 좋은 도시를 만들어 가도록 하겠습니다.</p>
+<p class='spc1'>  우리 시는 저출생 극복을 선도하는 도시로서 거버넌스를 통해 범사회적 대응 체계를 전개해 왔습니다.</p>
+<p class='spc1'>  앞으로 맞춤형 인구교육을 추진하여 저출생에 대한 시민 인식을 개선해 나가고, 결혼, 출생, 다자녀 지원 사업을 더욱 확대해 나가도록 하겠습니다.</p>
+<p class='spc1'>  우리 시는 국공립어린이집 확충률 전국 1위를 기록하며 전국 최고 수준의 공공 보육 체계를 유지하고 있습니다.</p>
+<p class='spc1'>  교육청과 함께 유·보 통합 시범 사업을 지속 추진하고, 아동과 청소년 돌봄시설을 확충해서 세종형 공공 보육 체계를 완성해 나가도록 하겠습니다.</p>
+<p class='spc1'>  2024년에는 공동캠퍼스가 개교하고 라이즈센터가 출범한 매우 뜻깊은 한 해였습니다.</p>
+<p class='spc1'>  올해에도 라이즈 시행 계획을 수립하고 공동캠퍼스의 안정적인 운영을 통해 대학과 지역, 산업, 청년의 동반 성장을 이루어 나가도록 하겠습니다.</p>
+<p class='spc1'>  그동안 우리 시는 복지 및 민생예산을 지속 확대해 왔습니다.</p>
+<p class='spc1'>  앞으로도 저소득층에 대한 생계급여, 사회보장급여 지원을 확충하고, 자활근로사업, 자산형성사업을 더욱 확대해 나가겠습니다.</p>
+<p class='spc1'>  특히 올해에는 종합복지센터를 추가로 신설하여 복지 안전망을 한층 더 강화해 나가도록 하겠습니다.</p>
+<p class='spc1'>  장애인에 대한 통합 돌봄과 긴급 돌봄 서비스, 어르신에 대한 건강 돌봄 서비스 등 소외계층에 대한 지원도 꾸준히 챙겨 나가도록 하겠습니다.</p>
+<p class='spc1'>  직장맘지원센터와 여성긴급전화를 통해 여성 자립과 여성 보호를 적극 지원해 나가도록 하겠습니다.</p>
+<p class='spc1'>  시민이 공감하는 시정을 추진해 나가도록 하겠습니다.</p>
+<p class='spc1'>  올해 다양한 계층의 시민들과 수요자 중심의 소통을 확대해 나갈 계획입니다.</p>
+<p class='spc1'>  시민이 행복한 행정 서비스를 실현하기 위해 시민 불편 100대 과제를 적극 발굴·개선해 나가고, 시민이 공감하는 행정 서비스를 적극 추진하도록 하겠습니다.</p>
+<p class='spc1'>  또한 지역 건설업체의 참여 확대, 분양 아파트 거주자 우선 공급 비율 확대 등 지역사회의 요구를 실현하는 시정을 해 나가도록 하겠습니다.</p>
+<p class='spc1'>  지금까지 2025년도 주요 업무 계획을 보고드렸습니다.</p>
+<p class='spc1'>  올해도 대내외적으로 어려운 여건이지만 미래전략수도 세종을 실현하는 데 시의회 의원님들 여러분의 더 많은 관심과 협조를 부탁드리겠습니다.</p>
+<p class='spc1'>  감사합니다.</p>
+</div>
+<div class='spkrMBR000044'>
+<p><span class='spkrbld'>○의장 <a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000044' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>임채성</a></span> 기획조정실장님 수고하셨습니다.</p>
+<p><hr /></p>
+</div>
+</div>
+<div class='agnd_7'>
+<p><a name='agnd_7'></a><span class='bld'>5. 2025년도 세종특별자치시교육청 주요 업무 계획 보고 청취의 건</span></p>
+<p class='align_right'>(11시23분)</p>
+<div class='spkrMBR000044'>
+<p><span class='spkrbld'>○의장 <a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000044' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>임채성</a></span> 다음은 의사일정 제5항 2025년도 세종특별자치시교육청 주요 업무 계획 보고 청취의 건을 상정합니다.</p>
+<p class='spc1'>  최교진 교육감님 나오셔서 보고해 주시기 바랍니다.</p>
+</div>
+<div class='spkr0450'>
+<p><span class='spkrbld'>○교육감 최교진</span> 존경하는 세종시민 여러분!</p>
+<p class='spc1'>  그리고 세종교육의 동반자이신 임채성 의장님과 의원님 여러분!</p>
+<p class='spc1'>  을사년(乙巳年) 새해에도 이 자리에 계신 의원님 여러분을 비롯해서 세종교육 공동체 모두가 건강하고 평안하시기를 기원하면서 2025년 주요 업무 계획을 말씀드리겠습니다.</p>
+<p class='spc1'>  우리 교육청은 지난해에도 우리 학생들이 미래를 살아갈 올바른 가치를 품고 성장할 수 있게 ‘모두가 특별해지는 세종교육’이라는 비전을 중심으로 최선을 다했습니다.</p>
+<p class='spc1'>  지난해 7월 출범한 우리 학교지원본부는 학교의 업무를 지원해서 교육활동 중심의 학교자치를 강화하는 데에 힘을 기울인 일이었습니다.</p>
+<p class='spc1'>  공교육 정상화를 위한 학교급별 교육과정의 안정적인 운영과 지원에 힘쓴 덕분에 우리 세종시 학생들의 진학 결과에서도 괄목할 만한 성과를 거두었습니다.</p>
+<p class='spc1'>  어느 학교 하나에 쏠리지 않고 고르게 결과를 만들어서 더욱 의미가 큽니다.</p>
+<p class='spc1'>  우리 교육청이 2017년부터 시작한 고교 상향 평준화의 결과가 확실하게 나타난 것이라고 생각해서 더욱 고무적입니다.</p>
+<p class='spc1'>  또한 선진형 학교운동부 운영 그리고 탐구와 체험 중심의 과학·수학 교육을 지원한 결과 각종 전국대회에서 우수한 성적을 거두기도 했습니다.</p>
+<p class='spc1'>  하나하나 모두 말씀드리기는 어렵지만 다양한 분야에 많은 성과들이 있었습니다.</p>
+<p class='spc1'>  ‘생각하는 사람, 참여하는 시민’을 지향하는 오늘의 세종교육이 있기까지 힘을 모아 주신 여러  의원님들 그리고 세종교육 공동체 모두에게 이 자리를 빌려 다시 한번 감사드립니다.</p>
+<p class='spc1'>  존경하는 임채성 의장님과 의원님 여러분!</p>
+<p class='spc1'>  우리 교육청은 지난해의 성과에 만족하지 않고 새해에도 교육 현장에 새로운 변화를 만들어 가는 도전을 계속하려고 합니다.</p>
+<p class='spc1'>  특히 올해에도 세종교육의 비전과 이에 따른 5대 정책 목표가 더욱 구체적으로 실현될 수 있게 다음과 같이 3대 핵심 정책 과제를 중점적으로 추진하려고 합니다.</p>
+<p class='spc1'>  첫째, 기초학력 책임 교육을 강화해 나가겠습니다.</p>
+<p class='spc1'>  학생들 사이의 교육 격차를 해소하고, 모든 학생이 학습 과정에서 소외되지 않고 성장할 수 있도록 기초학력 책임 교육 강화에 더욱 힘쓰겠습니다.</p>
+<p class='spc1'>  이를 위해서 더욱 정밀하고 더욱 체계적인 진단을 바탕으로 개인의 특성에 맞는 맞춤형 다중 지원과 함께 방학 중에도 우리 아이들의 성장이 지속될 수 있게 다양한 프로그램을 운영하고, 이를 위해 점심 식사와 통학 차량 등 지원을 계속하겠습니다.</p>
+<p class='spc1'>  두 번째, 복합 위기 학생의 맞춤형 지원을 위해 생활·정서·학습의 통합 지원을 하겠습니다.</p>
+<p class='spc1'>  세종교육공동체와 세종교육회의 등의 의견을 반영해서 위기 학생을 대상으로 신속하고 정확한 지원을 통합적으로 추진하겠습니다.</p>
+<p class='spc1'>  세 번째, 교육활동에 전념할 수 있는 교육활동 중심의 학교를 구현하겠습니다.</p>
+<p class='spc1'>  학교의 자율성과 자치를 더욱 강화하고 교육과정이 중심이 되는 학교 교육활동이 잘 이루어질 수 있게 학교의 불합리한 업무를 정리해 나가겠습니다.</p>
+<p class='spc1'>  아울러 학교와 원활한 소통을 할 수 있도록 전담 체계를 적극적으로 운영하고, 학교가 결정하면 교육청이 지원할 수 있는 그런 실질적인 체계를 만들어 나가겠습니다.</p>
+<p class='spc1'>  학교는 교육청과 교육부 같은 상부 기관의 일방적인 관리와 감독을 받는 대상이 아니어야 합니다.</p>
+<p class='spc1'>  학교는 마을교육 생태계 안에서 지역사회의 교육 주체가 함께 만들어 가는 교육활동의 장이어야 합니다.</p>
+<p class='spc1'>  이를 위해 교육청은 강도 높은 정책 정비와 함께 학교 현장의 여건과 상황에 맞는 정책을 추진할 수 있도록 더욱 고민하겠습니다.</p>
+<p class='spc1'>  기존의 관행을 과감하게 끊고 학교와 현장에서 문제를 선택하고 규정하면서 합리적인 대안을 만들어 학교자치의 심화를 더욱 밀도 있게 지원하겠습니다.</p>
+<p class='spc1'>  그리고 학교자치에 실질적인 도움을 줄 수 있는 세종미래장학 체제를 마련해서 학교가 교육과정을 자율적으로 운영할 수 있도록 역량과 여건 마련에 힘을 기울이고 교육청 장학의 내용과 방법을 전환하도록 하겠습니다.</p>
+<p class='spc1'>  특히 세종시는 단설 유치원이 많아서 큰 영향을 받고 있는 국가적인 정책인 유·보 통합 과제가 있습니다.</p>
+<p class='spc1'>  모든 영유아에게 양질의 교육과 돌봄을 제공할 수 있게 세종만의 유·보 통합 모델을 만들기 위해 노력하겠습니다.</p>
+<p class='spc1'>  세종교육의 동반자인 임채성 의장님과 의원님 여러분!</p>
+<p class='spc1'>  지금까지 말씀드린 우리 아이들의 삶과 성장을 온전히 지원하는 정책들이 구체적이고 보다 효과적으로 실현되기 위해서는 제도적인 뒷받침과 더불어 충분한 예산이 무엇보다도 중요합니다.</p>
+<p class='spc1'>  지난해에는 의원님들의 관심과 지원으로 세종시의 교육정책을 잘 수행할 수 있었습니다.</p>
+<p class='spc1'>  올해는 세수 감소에 더해서 고교 무상교육 예산 부담 증가 등으로 예산 운용에 지난해보다 훨씬 큰 어려움이 예상되기는 합니다.</p>
+<p class='spc1'>  또한 저출생과 세종시 유입 인구 감소로 학령인구가 줄어드는 지금은 우리 학생들의 교육 여건 개선을 위한 교육 주체의 깊은 관심과 참여가 또 어느 때보다도 필요한 시기이기도 합니다.</p>
+<p class='spc1'>  따라서 국가균형발전을 선도하는 세종특별자치시에서 교육적 투자는 보다 도전적으로 이루어져야 할 것이라고 믿습니다.</p>
+<p class='spc1'>  올해 3월에는 캠퍼스고등학교와 산울초·중 통합학교의 개교가, 그리고 9월에는 평생교육원 개원이 있습니다.</p>
+<p class='spc1'>  캠퍼스고등학교는 세종뿐만 아니라 전국 최초로 개교하는 형태의 학교입니다.</p>
+<p class='spc1'>  초·중 통합학교와 평생교육원 역시 우리 세종시에서는 처음으로 만들어지는 형태의 학교이고, 또 기관입니다.</p>
+<p class='spc1'>  교육청이 가진 그간의 경험 그리고 확실한 지원으로 조기에 잘 안착되도록 최선을 다하겠습니다.</p>
+<p class='spc1'>  끝으로 임채성 의장님께서 신년사를 통해서 말씀하신 것처럼 “시민의 작은 목소리에도 크게 귀 기울이고 보이지 않는 곳까지 세심히 살피겠다.”는 말씀에 깊이 동감하면서 저와 우리 교육청 모든 직원이 같은 마음과 같은 자세로 모두가 특별해지는 세종교육을 위해 열과 성을 다하겠습니다.</p>
+<p class='spc1'>  의원님들께서 양해해 주신다면 보다 세부적인 내용은 우리 교육국장이 보고드리도록 하겠습니다.</p>
+<p class='spc1'>  감사합니다.</p>
+</div>
+<div class='spkrMBR000044'>
+<p><span class='spkrbld'>○의장 <a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000044' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>임채성</a></span> 교육감님 수고하셨습니다.</p>
+<p class='spc1'>  다음은 신명희 교육국장님 나오셔서 보고해 주시기 바랍니다.</p>
+</div>
+<div class='spkr0494'>
+<p><span class='spkrbld'>○교육국장 신명희</span> 안녕하십니까, 세종특별자치시교육청 교육국장 신명희입니다.</p>
+<p class='spc1'>  2025년도 주요 업무 추진 계획에 대해 보고드리겠습니다.</p>
+<p class='spc1'>  자료 4쪽부터 6쪽입니다.</p>
+<p class='spc1'>  우리 교육청은 모두가 특별해지는 세종교육을 실현하기 위해서 교육공동체 의견 수렴 과정을 거쳐서 3대 핵심 정책 과제를 선정하고 5대 정책 방향을 중심으로 2025년 주요 업무 계획을 수립하였습니다.</p>
+<p class='spc1'>  3대 핵심 정책 과제는 기초학력 책임교육 강화, 생활·정서·학습 통합 지원, 교육활동 중심 학교 구현입니다.</p>
+<p class='spc1'>  본 과제는 2025년도 주요 업무 계획의 모든 과제와 유기적으로 연계하여 추진하겠습니다.</p>
+<p class='spc1'>  자료 12쪽입니다.</p>
+<p class='spc1'>  첫 번째 정책 방향인 다 같이 성장하는 맞춤형 교육에 대해 보고드리겠습니다.</p>
+<p class='spc1'>  첫째, 지속 가능한 미래를 만드는 세종 창의적 교육과정을 운영하겠습니다.</p>
+<p class='spc1'>  분권화, 지역화, 자율화를 강조하는 2022 개정 교육과정 취지에 맞는 세종 창의적 교육과정을 고도화하겠습니다.</p>
+<p class='spc1'>  학교가 주어지는 교육과정이 아닌 함께 만들어 가는 교육과정을 개발·운영할 수 있도록 지원하겠습니다.</p>
+<p class='spc1'>  또한 고교학점제 전면 도입에 따라 학생들의 학습 선택권을 보장하기 위해 공동교육과정 운영을 내실화하겠습니다.</p>
+<p class='spc1'>  둘째, 모두의 성장을 위한 책임교육을 실현해 나가겠습니다.</p>
+<p class='spc1'>  우리 아이들이 사회적 삶을 유지할 수 있도록 기초학력 맞춤형 지원 체계를 더욱 강화하겠습니다.</p>
+<p class='spc1'>  영유아 교육·보육 격차 완화를 추구하는 온세종 유·보 통합을 체계적으로 추진하겠습니다.</p>
+<p class='spc1'>  셋째, 진로 역량을 키우는 맞춤 교육을 위해 노력하겠습니다.</p>
+<p class='spc1'>  배움과 삶이 연결된 진로를 설계할 수 있도록 진로교육을 내실화하겠습니다.</p>
+<p class='spc1'>  과학·수학·정보 종합 프로젝트인 이도 프로젝트를 추진하여 세종시 아이들이 이공계 인재로 도약할 수 있도록 지원하겠습니다.</p>
+<p class='spc1'>  또한 지역·산업체·학교 기반 세종형 협약형 특성화고를 운영하여 지역 산업 맞춤형 인재를 양성하겠습니다.</p>
+<p class='spc1'>  자료 17쪽입니다.</p>
+<p class='spc1'>  두 번째 정책 방향인 미래를 열어 가는 교육환경에 대해 보고드리겠습니다.</p>
+<p class='spc1'>  첫째, 교육의 질을 높이는 미래교육 환경을 조성하겠습니다.</p>
+<p class='spc1'>  미래교육 실현을 위한 교육 환경 조성에 지속적으로 힘쓰겠습니다.</p>
+<p class='spc1'>  장애 학생 맞춤형 지원 체제를 강화하고 북부특수교육지원센터 활성화를 통해 읍·면 지역 특수 학급을 지원하겠습니다.</p>
+<p class='spc1'>  둘째, 학습자가 삶을 주도하는 세종미래교육을 실현하겠습니다.</p>
+<p class='spc1'>  학습자 주도성을 키우는 세종미래교육 구현을 위해 세종미래장학을 추진하겠습니다.</p>
+<p class='spc1'>  디지털 미래교육 모델 개발을 위한 선도학교 운영, 교원 역량 강화, 학교급별 맞춤형 프로그램 운영을 지원하겠습니다.</p>
+<p class='spc1'>  셋째, 연대하고 실천하는 시민교육을 지속하겠습니다.</p>
+<p class='spc1'>  국제사회와 소통하고 지속 가능한 미래로 삶을 전환할 수 있도록 지속 가능 발전 교육과 세계시민교육을 추진하겠습니다.</p>
+<p class='spc1'>  민주적 절차를 내재화하고 학생의 의견이 정책이 되는 경험을 제공할 수 있도록 민주시민교육을 내실화하겠습니다.</p>
+<p class='spc1'>  자료 21쪽입니다.</p>
+<p class='spc1'>  세 번째 정책 방향인 학습권을 보장하는 교육복지에 대해 보고드리겠습니다.</p>
+<p class='spc1'>  첫째, 촘촘한 맞춤형 교육복지를 지원하겠습니다.</p>
+<p class='spc1'>  특수교육 대상 학생 성장 발달 지원 체계를 구축하여 장애 특성과 학교 과정별 맞춤형 지원을 강화하겠습니다.</p>
+<p class='spc1'>  다문화 학생의 학교 적응을 위한 학습, 심리 정서, 진로 등 종합적 지원을 하겠습니다.</p>
+<p class='spc1'>  읍·면 지역 위기 학생·학부모 맞춤형 심리상담을 운영하여 심리적 안정과 학교생활 적응력 향상을 돕겠습니다.</p>
+<p class='spc1'>  둘째, 모두가 행복한 교육복지를 이루어 나가겠습니다.</p>
+<p class='spc1'>  모든 학생을 위한 보편적 교육복지를 내실화하겠습니다.</p>
+<p class='spc1'>  학생 맞춤 통합 지원 모두이음 지원 체계를 구축하여 복합 위기 학생을 지원하겠습니다.</p>
+<p class='spc1'>  쉼과 놀이 그리고 배움이 있는 세종형 늘봄학교 운영을 확대하겠습니다.</p>
+<p class='spc1'>  셋째, 존중받는 교육활동을 보장하겠습니다.</p>
+<p class='spc1'>  교원의 정당한 교육활동과 학생의 학습권 보호를 통해 학교 교육 안정화를 도모하겠습니다.</p>
+<p class='spc1'>  공정하고 신속한 지역교권보호위원회를 운영하겠습니다.</p>
+<p class='spc1'>  악성민원팀 운영, 학교 민원상담실 구축 및 교원 마음 건강 사업 운영을 통해 교원의 심리 안정을 지원하겠습니다.</p>
+<p class='spc1'>  자료 24쪽 네 번째 정책 방향인 삶의 질을 높이는 교육 생태계에 대해 보고드리겠습니다.</p>
+<p class='spc1'>  먼저 안전하고 건강한 학교를 만들겠습니다.</p>
+<p class='spc1'>  예방-발견-치유-회복-교육, 학생 마음 건강 통합 지원 방안을 마련하여 마음 건강 문화 조성 및 학생 마음 건강 증진을 최우선으로 지원하겠습니다.</p>
+<p class='spc1'>  그 밖에 학교 급식, 학교 시설, 보건, 등하굣길 안전을 위한 노력을 지속하겠습니다.</p>
+<p class='spc1'>  둘째, 존중과 배려의 학생 생활을 지원하겠습니다.</p>
+<p class='spc1'>  학생의 관계 역량 강화를 위한 관계 중심 생활교육을 내실화하고 통합적 학생 상담을 지원하겠습니다.</p>
+<p class='spc1'>  학교폭력제로센터 운영을 통한 학교폭력 원스톱 지원 체제를 강화하고, 관계 회복 대화 모임을 통해 학교폭력 관련 학생 간 관계 회복 지원을 활성화하겠습니다.</p>
+<p class='spc1'>  셋째, 배움이 풍요로운 학습 도시 세종을 만들어 가겠습니다.</p>
+<p class='spc1'>  세종마을교육지원센터 확대·운영을 통해 지역사회의 교육기능을 확대하고 학교-마을 연계 교육과정이 원활히 운영될 수 있도록 지원하겠습니다.</p>
+<p class='spc1'>  평생교육원과 학생교육문화원 개원을 원활하게 추진하여 동 지역과 읍·면 지역 평생교육 기반을 구축하겠습니다.</p>
+<p class='spc1'>  자료 29쪽 다섯 번째 정책 방향인 시민과 함께하는 교육자치·교육행정에 대해 보고드리겠습니다.</p>
+<p class='spc1'>  첫째, 참여와 협력의 교육자치를 실현하겠습니다.</p>
+<p class='spc1'>  상향식 교육정책 발굴을 위하여 다양한 세종교육 주체의 참여의 장을 마련하겠습니다.</p>
+<p class='spc1'>  정책 연구 내실화를 통한 현장 적합도 높은 정책을 개발하겠습니다.</p>
+<p class='spc1'>  협력적 조직문화 정착을 통해 상생과 소통의 노사관계 구축을 위해 노력하겠습니다.</p>
+<p class='spc1'>  둘째, 교육 주체가 일궈 가는 학교자치를 더욱 내실화하겠습니다.</p>
+<p class='spc1'>  학생 대표 참여가 보장된 교육활동 의사결정 과정을 통해 학생자치활동을 활성화하겠습니다.</p>
+<p class='spc1'>  학교운영위원회 및 학부모회 활성화를 위한 연수 및 정보 교류의 장을 마련하겠습니다.</p>
+<p class='spc1'>  학교자치를 이끄는 학교 리더의 리더십을 강화하고 교육공동체 참여와 데이터 기반 세종 학교평가로 학교자치를 강화하겠습니다.</p>
+<p class='spc1'>  셋째, 현장 중심의 교육행정을 이루겠습니다.</p>
+<p class='spc1'>  학교 현장 중심 맞춤형 즉시 지원으로 교육활동에 전념할 수 있는 교육환경을 조성하겠습니다.</p>
+<p class='spc1'>  마지막으로 산울초·중학교, 세종캠퍼스고등학교, 온세종 개교에 만전을 기하겠습니다.</p>
+<p class='spc1'>  이상으로 세종특별자치시교육청 2025년 주요 업무 추진 계획에 대한 보고를 마치겠습니다.</p>
+<p class='spc1'>  감사합니다.</p>
+</div>
+<div class='spkrMBR000044'>
+<p><span class='spkrbld'>○의장 <a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000044' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>임채성</a></span> 교육국장님 수고하셨습니다.</p>
+<p><hr /></p>
+</div>
+</div>
+<div class='agnd_8'>
+<p><a name='agnd_8'></a><span class='bld'>6. 휴회의 건(의장 제의)</span></p>
+<p class='spc1'><a name='agnd_9'></a><span class='bld'>  - 2025. 2. 5. ∼ 2. 13.(9일간)</span></p>
+<p class='align_right'>(11시41분)</p>
+<div class='spkrMBR000044'>
+<p><span class='spkrbld'>○의장 <a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000044' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>임채성</a></span> 다음은 의사일정 제6항 휴회의 건을 상정합니다.</p>
+<p class='spc1'>  각 상임위원회 활동을 위해 2월 5일부터 2월 13일까지 본회의를 휴회코자 하는데 이의 없으십니까?</p>
+<p class='spc3'>      (『네.』 하는 의원 있음)</p>
+<p class='spc1'>  이의가 없으므로 2월 5일부터 2월 13일까지 휴회를 선포합니다.</p>
+<p class='spc1'>  다음은 의안 정리에 관한 사항입니다.</p>
+<p class='spc1'>  오늘 의결된 의안에 대해 서로 저촉되는 조항, 문구, 숫자와 그 밖의 정리는 「세종특별자치시의회 회의 규칙」 제34조에 따라 의장에게 위임해 주시기 바랍니다.</p>
+<p class='spc1'>  의원님 여러분, 오늘 계획된 의사일정을 모두 마쳤습니다.</p>
+<p class='spc1'>  원만한 회의 진행을 위해 협조해 주신 의원님들과 관계 공무원 여러분께 감사의 말씀을 드립니다.</p>
+<p class='spc1'>  이상으로 제96회 세종특별자치시의회 임시회 제1차 본회의를 마치고, 제2차 본회의는 2월 14일 오전 10시에 개의됨을 알려 드립니다.</p>
+<p class='spc1'>  산회를 선포합니다.</p>
+<p class='align_right'>(11시42분 산회)</p>
+</div>
+</div>
+<div class='agnd_e'>
+<p><hr /></p>
+<table class='attncnclmem'>
+<tr><td colspan='2' class='bld'>○출석의원(20인)</td></tr>
+<tr><td></td><td class='align_attn'><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000044' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>임채성</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000079' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>김효숙</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000065' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>김동빈</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000077' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>김영현</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000076' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>김현미</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000074' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>김재형</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000066' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>윤지성</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000073' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>이현정</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000064' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>김광운</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000063' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>김충식</a></span></td></tr>
+<tr><td></td><td class='align_attn'><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000067' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>김학서</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000078' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>김현옥</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000080' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>박란희</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000043' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>상병헌</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000068' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>안신일</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000081' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>여미전</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000075' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>유인호</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000058' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>이순열</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000069' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>최원석</a></span><span><a href='/mnu/pom/memberProfile.do?gnrtn=4&amp;mmbrCd=MBR000083' onclick='getMmbrProfileView(this.href); return false;' target='_blank' title='새창이동' rel='noopener noreferrer'>홍나영</a></span></td></tr>
+</table>
+<table class='attnpblcoffcl'>
+<tr><td colspan='2' class='bld'>○출석공무원</td></tr>
+<tr><td class='align_attn' colspan='2'> -세종특별자치시청</td></tr>
+<tr><td class='align_attn'>시장</td><td class='align_attn'>최민호</td></tr>
+<tr><td class='align_attn'>행정부시장</td><td class='align_attn'>김하균</td></tr>
+<tr><td class='align_attn'>경제부시장</td><td class='align_attn'>이승원</td></tr>
+<tr><td class='align_attn'>기획조정실장</td><td class='align_attn'>이용일</td></tr>
+<tr><td class='align_attn'>시민안전실장</td><td class='align_attn'>고성진</td></tr>
+<tr><td class='align_attn'>자치행정국장</td><td class='align_attn'>이상호</td></tr>
+<tr><td class='align_attn'>경제산업국장</td><td class='align_attn'>김현기</td></tr>
+<tr><td class='align_attn'>도농상생국장</td><td class='align_attn'>양완식</td></tr>
+<tr><td class='align_attn'>문화체육관광국장</td><td class='align_attn'>김려수</td></tr>
+<tr><td class='align_attn'>보건복지국장</td><td class='align_attn'>이영옥</td></tr>
+<tr><td class='align_attn'>도시주택국장</td><td class='align_attn'>이두희</td></tr>
+<tr><td class='align_attn'>교통국장</td><td class='align_attn'>천흥빈</td></tr>
+<tr><td class='align_attn'>환경녹지국장</td><td class='align_attn'>권영석</td></tr>
+<tr><td class='align_attn'>소방본부장</td><td class='align_attn'>박태원</td></tr>
+<tr><td class='align_attn'>보건환경연구원장</td><td class='align_attn'>정경용</td></tr>
+<tr><td class='align_attn'>감사위원장</td><td class='align_attn'>김광남</td></tr>
+<tr><td class='align_attn'>자치경찰위원장</td><td class='align_attn'>남택화</td></tr>
+<tr><td class='align_attn' colspan='2'> -세종특별자치시교육청</td></tr>
+<tr><td class='align_attn'>교육감</td><td class='align_attn'>최교진</td></tr>
+<tr><td class='align_attn'>부교육감</td><td class='align_attn'>천범산</td></tr>
+<tr><td class='align_attn'>교육국장</td><td class='align_attn'>신명희</td></tr>
+<tr><td class='align_attn'>행정국장</td><td class='align_attn'>이주희</td></tr>
+<tr><td class='align_attn'>정책국장</td><td class='align_attn'>박영신</td></tr>
+<tr><td class='align_attn'>학교지원본부장</td><td class='align_attn'>이미자</td></tr>
+<tr><td class='align_attn'>감사관</td><td class='align_attn'>최호열</td></tr>
+</table>
+<table class='attnpblcoffcl'>
+<tr><td colspan='2' class='bld'>○의회사무처</td></tr>
+<tr><td class='align_attn'>처장</td><td class='align_attn'>김덕중</td></tr>
+<tr><td class='align_attn'>의사입법담당관</td><td class='align_attn'>김온회</td></tr>
+</table>
+<table class='attnrcrdcoffcl'>
+<tr><td class='bld'>○기록공무원</td></tr>
+
+<tr><td>&nbsp;&nbsp;이지혜&nbsp;&nbsp;김춘호&nbsp;&nbsp;장은영&nbsp;&nbsp;김보경</td></tr>
+</table>
+</div><!--// 회의록내용 -->                 </div>            </div>            <p class="skip"><a href="#con_top">맨위로 이동</a></p>        </div>        <!-- 페이지위로 -->        <div class="pageTopBtn"><a href="#content" title="페이지위로 이동"><img src="/images/egovframework/com/scc/mnts/btn_top.png" alt="페이지위로" /></a></div>        <!--// 페이지위로 -->     </div>    <!--// minutesContent --> </div>
