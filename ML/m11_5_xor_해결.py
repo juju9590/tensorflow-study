@@ -49,7 +49,7 @@ model.fit(x_data, y_data)
 print("====================",model.__class__.__name__,"===================")
 
 #4. 평가, 성능
-score = model.score(x_data, y_data)  # model.evaluate(x_test, y_test)
+score = model.score(x_data, y_data)  
 print("acc : ", score)
 print(model.feature_importances_)
 
@@ -64,6 +64,13 @@ print(model.feature_importances_)
 # activation=None
 # acc:  0.5
 # acc_accuracy : 0.5
+
+# ====== DecisionTreeClassifier =====
+# acc :  1.0
+# [0. 1.]
+
+
+# 2차 겨울은 컴퓨팅 파워로 극복
 
 
 
